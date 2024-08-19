@@ -25,6 +25,10 @@ div {
     background-color: var(--secondary-color);
 }
 
+.text-main {
+    color: var(--main-color);
+}
+
 .swift-start {
     width: 25vb;
 }

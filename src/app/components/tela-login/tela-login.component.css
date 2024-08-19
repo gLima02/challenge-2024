@@ -2,15 +2,19 @@
     background-color: #0444b3;
 }
 
+.card {
+    width: 400px;
+}
+
 @keyframes slide-left {
     from {
         transform: translate(0, 0);
-        width: 300px;
+        width: 50vh;
     }
 
     to {
         transform: translate(-17vw, 130px);
-        width: 1000px;
+        width: 70vh;
     }
 }
 
@@ -29,12 +33,31 @@
 @keyframes slide-in-right {
     from {
         transform: translateX(100vw);
+        opacity: 0;
     }
-
+    
     to {
         transform: translateX(-17vw);
+        opacity: 1;
     }
 }
+
+
+@keyframes pop-in {
+    from {
+        opacity: 0;
+        pointer-events: none;
+    }
+    
+    to {
+        opacity: 1;
+        pointer-events: all;
+    }
+}
+.animate-start {
+    animation: pop-in 1s forwards; /* Corrige o nome da animação */
+}
+
 
 .animate-slide-left {
     animation: slide-left 1s forwards;
@@ -54,14 +77,27 @@
     right: 0;
     transform: translateY(50vw);
     z-index: 5;
+    opacity: 0;
     /* Certifique-se de que o texto está acima dos outros elementos */
 }
 
 #eurofarma {
     z-index: 1000;
-    width: 300px;
+    width: 50vh;
 }
 
-  #formulário {
-    /* position: absolute; */
-  }
+#start {
+    opacity: 0;
+    pointer-events: none;
+    color: #0444b3;
+    background-color: rgb(255, 255, 255);
+}
+
+#start:hover {
+    color: #0444b3;
+    background-color: rgb(218, 218, 218);
+}
+
+/* #formulário {
+    position: absolute;
+    } */
