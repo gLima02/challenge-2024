@@ -17,3 +17,7 @@ div {
     background-color: var(--secondary-color);
 }
 
+.border-main {
+    border-color: #03358e;
+    border: 1px;
+}
