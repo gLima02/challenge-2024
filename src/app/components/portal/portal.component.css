@@ -4,6 +4,11 @@
     width: 5%;
   }
   
+  .title{
+    color: #03358e;
+    font-weight: bold;
+  }
+
   .nav-link:hover {
     color: darken(var(--main-color), 10%);
   }
