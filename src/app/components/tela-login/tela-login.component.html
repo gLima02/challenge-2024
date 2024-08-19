@@ -1,24 +1,23 @@
 <div class="d-flex justify-content-center align-items-center vw-100 vh-100 bg-main">
+  <img id="swift-start" class="img-fluid m-3 swift-start position-absolute top-0 start-0" src="../../../assets/images/logo-swiftstart.png" alt="Logo SwiftStart">
   <div class="container d-flex flex-column justify-content-center align-items-center col-md-4">
-    <img class="img-fluid w-50 h-50" src="../../../assets/images/logo-eurofarma.png" alt="Logo EuroFarma">
-    <div class="card bg-main text-light p-4 shadow w-75 mb-5 border-light" style="transform: translateY(-30px);">
+    <img id="eurofarma" class="img-fluid" src="../../../assets/images/logo-eurofarma.png" alt="Logo EuroFarma" style="transform: translateY(-30px);">
+    <div id="formulário" style="transform: translateY(-70px);" class="card bg-main text-light p-4 shadow w-75 mb-5 border-light">
       <h3 class="text-center mb-4">Portal do Colaborador</h3>
-      <form>
-        <!-- Campo de Usuário (Email) -->
+      <form (submit)="onLoginClick($event)">
         <div class="mb-3">
           <label for="email" class="form-label">Usuário (Email)</label>
           <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail" required>
         </div>
-        <!-- Campo de Senha -->
-        <div class="mb-3">
+        <div class="mb-4">
           <label for="password" class="form-label">Senha</label>
           <input type="password" class="form-control" id="password" placeholder="Digite sua senha" required>
         </div>
-        <!-- Botão de Login -->
         <div class="d-grid">
           <button type="submit" class="btn hover bg-main text-light border-light">Login</button>
         </div>
       </form>
     </div>
   </div>
+  <h1 class="welcome-text text-light">Olá, Murilo!<br/>Bem-Vindo ao<br/>novo OnBoarding!</h1>
 </div>

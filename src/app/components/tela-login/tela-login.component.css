@@ -1,3 +1,67 @@
 .hover:hover {
     background-color: #0444b3;
 }
+
+@keyframes slide-left {
+    from {
+        transform: translate(0, 0);
+        width: 300px;
+    }
+
+    to {
+        transform: translate(-17vw, 130px);
+        width: 1000px;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+        transform: translatey(0);
+    }
+    
+    to {
+        opacity: 0;
+        transform: translatey(50vh);
+    }
+}
+
+@keyframes slide-in-right {
+    from {
+        transform: translateX(100vw);
+    }
+
+    to {
+        transform: translateX(-17vw);
+    }
+}
+
+.animate-slide-left {
+    animation: slide-left 1s forwards;
+}
+
+.animate-fade-out {
+    animation: fade-out 1s forwards;
+}
+
+.animate-slide-in-right {
+    animation: slide-in-right 1s forwards;
+}
+
+.welcome-text {
+    font-size: 4vw;
+    position: absolute;
+    right: 0;
+    transform: translateY(50vw);
+    z-index: 5;
+    /* Certifique-se de que o texto está acima dos outros elementos */
+}
+
+#eurofarma {
+    z-index: 1000;
+    width: 300px;
+}
+
+  #formulário {
+    /* position: absolute; */
+  }
