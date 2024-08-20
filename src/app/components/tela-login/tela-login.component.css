@@ -8,23 +8,24 @@
 
 @keyframes slide-left {
     from {
-        transform: translate(0, 0);
+        transform: translate(0, -20vh);
+        
     }
     to {
-        transform: translate(-17vw, calc(20vh - 10%)); /* Centraliza a imagem verticalmente */
-        width: 40vw;
+        transform: translate(-18vw, 0); /* Centraliza a imagem verticalmente */
+        /* Centraliza a imagem verticalmente */
     }
 }
 
 @keyframes fade-out {
     from {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(120px);
     }
     
     to {
         opacity: 0;
-        transform: translateY(50vh);
+        transform: translateY(80vh);
     }
 }
 
@@ -62,6 +63,7 @@
 }
 
 .animate-fade-out {
+    pointer-events: none;
     animation: fade-out 1s forwards;
 }
 
@@ -80,8 +82,9 @@
 }
 
 #eurofarma {
-    z-index: 1000;
-    width: 80%;
+    z-index: 0;
+    width: 50%;
+    transform: translateY(-20vh);
     /* max-width: 50%; /* Garante que a imagem não ultrapasse a largura do container pai */
    /* height: auto; */
 }
@@ -89,14 +92,19 @@
 @media (max-width: 768px) {
     #eurofarma {
         width: 50%; /* Ajusta a largura para telas menores */
-        max-width: 300px; /* Limita a largura em dispositivos pequenos */
+        max-width: 200px; /* Limita a largura em dispositivos pequenos */
     }
+}
+
+#formulario {
+transform: translateY(120px);
 }
 
 #start {
     opacity: 0;
     pointer-events: none;
     color: #0444b3;
+    transform: translateY(20vh);
     background-color: rgb(255, 255, 255);
 }
 
@@ -107,9 +115,8 @@
 
 .welcome-text {
     transform: translate(-17vw, calc(25vh - 20%)); /* Centraliza a imagem verticalmente */
-
+    pointer-events: none;
 }
-
 /* #formulário {
     position: absolute;
     } */

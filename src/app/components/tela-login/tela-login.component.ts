@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './tela-login.component.css'
 })
 export class TelaLoginComponent {
+
   onLoginClick(event: Event): void {
     event.preventDefault(); // Impede o comportamento padrão do formulário
 
