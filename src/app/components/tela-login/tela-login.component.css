@@ -90,9 +90,26 @@
 }
 
 @media (max-width: 768px) {
+    #formulario {
+        width: 340px;
+    }
+
+    #swift-start {
+        width: 50%;
+        max-width: 150px; /* Limita a largura em dispositivos pequenos */
+    }
+
     #eurofarma {
         width: 50%; /* Ajusta a largura para telas menores */
         max-width: 200px; /* Limita a largura em dispositivos pequenos */
+    }
+}
+
+@media (max-height: 750px) {
+    #eurofarma {
+        width: 50%; /* Ajusta a largura para telas menores */
+        max-width: 300px; /* Limita a largura em dispositivos pequenos */
+        margin-bottom: 20px;
     }
 }
 
