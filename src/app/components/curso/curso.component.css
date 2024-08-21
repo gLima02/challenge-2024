@@ -1,0 +1,59 @@
+ 
+  .logo {
+    height: 5%;
+    width: 5%;
+  }
+  
+  .title{
+    color: #03358e;
+    font-weight: bold;
+  }
+
+  .subtitle-color {
+    color: #03358e;
+  }
+
+  .bg-exc {
+    background-color: rgb(217, 217, 217);
+  }
+
+  .nav-link:hover {
+    color: darken(var(--main-color), 10%);
+  }
+  
+  .content {
+    padding: 20px;
+  }
+  
+  .module {
+    color: #03358e;
+    border: 1px solid #03358e;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .progress-bar {
+    background-color: var(--main-color);
+  }
+  
+  h2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .dropdown-icon {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    font-size: 1.2rem; /* Tamanho do ícone */
+  }
+  
+  .rotate {
+    transform: rotate(180deg); /* Rotaciona a seta quando os módulos estão visíveis */
+  }
+  
+.btn-acess{
+    background-color: white;
+    border-color: white;
+    color: #03358e;
+}
