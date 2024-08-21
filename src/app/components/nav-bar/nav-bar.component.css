@@ -1,0 +1,20 @@
+.logo {
+    width: 30%;
+    min-width: 50px;
+  }
+  
+  #navigation {
+    justify-content: space-between;
+  }
+  
+  @media (max-width: 500px) {
+    #navigation {
+      justify-content: center;
+    }
+  }
+  
+  .nav-link:hover {
+    color: darken(var(--main-color), 10%);
+  }
+  
+ 

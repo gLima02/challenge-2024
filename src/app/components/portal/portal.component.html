@@ -1,46 +1,26 @@
-<div class="vh-100 vw-100 ">
-  <div class="header d-flex align-items-center bg-main">
-    <nav class="nav navbar-expand-lg navbar-collapse vw-100">
-      <img src="../../../assets/images/logo-eurofarma.png" alt="Logo Eurofarma" class="logo">
-      <ul class="nav justify-content-between vw-100">
-        <div class="d-flex">
-            <li class="nav-item"><a class="nav-link text-white" href="#">Financeiro</a></li>
-        </div>
-        <div class="d-flex">
-            <li class="nav-item"><a class="nav-link text-white" href="#">Cursos</a></li>
-            <li class="nav-item"><a class="nav-link text-white" href="#">Meu Progresso</a></li>
-        </div>
-      </ul>
-    </nav>
-  </div>
+<div class="vh-100 vw-100">
 
-  <div class="mt-4">
-    <h1 class="d-flex justify-content-center title" style="width: 56.5%;">Cursos</h1>
+<app-nav-bar></app-nav-bar>
 
-    <!-- Contêiner para centralizar o card -->
-    <div class="d-flex justify-content-center">
-      <div class="" style="width: 50%;">
-        <div class="">
-          <!-- Título do dropdown com ícone de seta -->
-          <h2 (click)="toggleModules()" class="d-flex align-items-center bg-main text-white p-3">
-            Políticas da Empresa
-            <span [ngClass]="{'rotate': showModules}" class="dropdown-icon ms-2">
-              &#9660;
-              <!-- Seta para baixo (ícone Unicode) -->
-            </span>
-          </h2>
+  <div class="mt-4 d-flex justify-content-center">
+    <div id="main-container" class="container-fluid">
+      <h1 class="title text-start">Cursos</h1>
+      <div>
+        <h2 (click)="toggleModules()" class="d-flex align-items-center justify-content-between bg-main text-white p-3">
+          Políticas da Empresa
+          <span [ngClass]="{'rotate': showModules}" class="dropdown-icon ms-2">&#9660;</span>
+        </h2>
 
-          <!-- Conteúdo colapsável com animação -->
-          <div [ngClass]="{'show': showModules, 'hide': !showModules}" class="modules-container mt-3">
-            <div class="module mb-4" *ngFor="let module of modules">
-              <h3>{{ module.name }}</h3>
-              <div class="d-flex align-items-center mb-2">
-                <div class="progress flex-grow-1 me-2">
-                  <div class="progress-bar" role="progressbar" [style.width.%]="module.progress"
-                    [attr.aria-valuenow]="module.progress" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <button class="btn btn-primary btn-acess">Acessar</button>
+        <div [ngClass]="{'show': showModules, 'hide': !showModules}" class="modules-container mt-3">
+          <div class="module mb-4" *ngFor="let module of modules">
+            <h3>{{ module.name }}</h3>
+            <div class="d-flex align-items-center mb-1">
+              <div class="progress flex-grow-1 me-2">
+                <div class="progress-bar" role="progressbar" [style.width.%]="module.progress"
+                  [attr.aria-valuenow]="module.progress" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
+                <div class="d-flex align-items-center me-2">{{ module.progress }}%</div>
+              <button class="btn btn-primary btn-acess">Acessar</button>
             </div>
           </div>
         </div>
