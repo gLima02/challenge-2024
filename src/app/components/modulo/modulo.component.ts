@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { CursoComponent } from '../curso/curso.component';
 
 @Component({
   selector: 'app-modulo',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, CursoComponent],
   templateUrl: './modulo.component.html',
   styleUrls: ['./modulo.component.css']
 })

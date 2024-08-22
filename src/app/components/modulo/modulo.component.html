@@ -9,11 +9,11 @@
       <h3>{{ module.name }}</h3>
       <div class="d-flex align-items-center mb-1">
         <div class="progress flex-grow-1 me-2">
-          <div class="progress-bar" role="progressbar" [style.width.%]="module.progress"
+          <div class="progress-bar z-3" role="progressbar" [style.width.%]="module.progress"
             [attr.aria-valuenow]="module.progress" aria-valuemin="0" aria-valuemax="100"></div>
         </div>
-        <div class="d-flex align-items-center me-2">{{ module.progress }}%</div>
-        <button class="btn btn-primary btn-acess">Acessar</button>
+        <div id="progresso-texto" class="d-flex align-items-center me-2">{{ module.progress }}%</div>
+        <button onclick="acessarCurso(title, module.name)" class="btn btn-primary btn-acess">Acessar</button>
       </div>
     </div>
   </div>
