@@ -6,6 +6,11 @@
     --secondary-color: #ffffff
 }
 
+html,
+body {
+    width: 100%;
+}
+
 div {
     font-family: "Inter", sans-serif;
 }

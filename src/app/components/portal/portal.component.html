@@ -1,30 +1,22 @@
-<div class="vh-100 vw-100">
-
 <app-nav-bar></app-nav-bar>
-
+<div class="margem">
   <div class="mt-4 d-flex justify-content-center">
     <div id="main-container" class="container-fluid">
       <h1 class="title text-start">Cursos</h1>
-      <div>
-        <h2 (click)="toggleModules()" class="d-flex align-items-center justify-content-between bg-main text-white p-3">
-          Políticas da Empresa
-          <span [ngClass]="{'rotate': showModules}" class="dropdown-icon ms-2">&#9660;</span>
-        </h2>
-
-        <div [ngClass]="{'show': showModules, 'hide': !showModules}" class="modules-container mt-3">
-          <div class="module mb-4" *ngFor="let module of modules">
-            <h3>{{ module.name }}</h3>
-            <div class="d-flex align-items-center mb-1">
-              <div class="progress flex-grow-1 me-2">
-                <div class="progress-bar" role="progressbar" [style.width.%]="module.progress"
-                  [attr.aria-valuenow]="module.progress" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                <div class="d-flex align-items-center me-2">{{ module.progress }}%</div>
-              <button class="btn btn-primary btn-acess">Acessar</button>
-            </div>
-          </div>
-        </div>
-      </div>
+      <app-modulo [title]="'Políticas da Empresa'" [modules]="[
+    { name: 'Módulo 1 | Básico I', progress: 100 },
+    { name: 'Módulo 2 | Básico II', progress: 57 },
+    { name: 'Módulo 3 | Intermediário I', progress: 33 },
+    { name: 'Módulo 4 | Intermediário II', progress: 0 },
+    { name: 'Módulo 5 | Avançado', progress: 0 }
+  ]">
+      </app-modulo>
+      <app-modulo [title]="'Conhecendo o Ambiente de Trabalho'" [modules]="[
+    { name: 'Módulo 1 | Básico I', progress: 100 },
+    { name: 'Módulo 2 | Básico II', progress: 57 },
+    { name: 'Módulo 3 | Intermediário I', progress: 33 },
+  ]">
+      </app-modulo>
     </div>
   </div>
 </div>
