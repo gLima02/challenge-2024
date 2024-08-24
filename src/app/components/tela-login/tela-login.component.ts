@@ -42,12 +42,12 @@ export class TelaLoginComponent implements OnInit {
       if (user.role === 'admin' || user.role === 'collaborator') {
         const alertDiv = document.querySelector('#alert-div') as HTMLElement
         alertDiv.remove()
-        const fullName = user.fullName
-        console.log(fullName)
+        const firstName = user.firstName
+        console.log(firstName)
         const eurofarmaImg = document.querySelector('#eurofarma') as HTMLElement;
         const loginCard = document.querySelector('.card') as HTMLElement;
         const welcomeText = document.querySelector('.welcome-text') as HTMLElement;
-        welcomeText.innerHTML = `Olá, ${fullName}!<br />Bem-Vindo ao<br />novo OnBoarding!`
+        welcomeText.innerHTML = `Olá, ${firstName}!<br />Bem-Vindo ao<br />novo OnBoarding!`
         const startBtn = document.querySelector('#start') as HTMLElement;
 
         // Adiciona as classes de animação aos elementos
