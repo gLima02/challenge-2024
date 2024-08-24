@@ -25,6 +25,10 @@ div {
     background-color: var(--secondary-color);
 }
 
+.border-main {
+    border-color: #03358e;
+    border: 1px;
+}
 .text-main {
     color: var(--main-color);
 }

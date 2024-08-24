@@ -1,32 +1,41 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import { UserService } from '../../services/login-service.service';
+import { CommonModule, NgFor } from '@angular/common';
 @Component({
   selector: 'app-tela-login',
   standalone: true,
-  imports: [],
+  imports: [NgFor, CommonModule],
   templateUrl: './tela-login.component.html',
   styleUrl: './tela-login.component.css'
 })
-export class TelaLoginComponent {
+export class TelaLoginComponent implements OnInit {
+  users: any[] = [];
 
-  onLoginClick(event: Event): void {
-    event.preventDefault(); // Impede o comportamento padrão do formulário
+  constructor(private userService: UserService) {}
 
-    const eurofarmaImg = document.querySelector('#eurofarma') as HTMLElement;
-    const loginCard = document.querySelector('.card') as HTMLElement;
-    const welcomeText = document.querySelector('.welcome-text') as HTMLElement;
-    const startBtn = document.querySelector('#start') as HTMLElement;
+  ngOnInit() {
+    this.userService.getUsers().subscribe(
+      (data) => this.users = data,
+      (error) => console.error('Error loading users:', error)
+    );
+  }
 
-    // Adiciona as classes de animação aos elementos
-    eurofarmaImg.classList.add('animate-slide-left');
-    loginCard.classList.add('animate-fade-out');
-    welcomeText.classList.add('animate-slide-in-right');
-    
-    
-    // Redirecionar ou executar outra lógica após a animação, se necessário
-    setTimeout(() => {
-      startBtn.classList.add('animate-start')
-      // Por exemplo, redirecionar para uma nova página ou mostrar uma nova view
-    }, 2000); // Tempo deve coincidir com a duração das animações
+  onLogin(event: Event) {
+    event.preventDefault(); // Previne o comportamento padrão do formulário
+
+    const email = (event.target as HTMLFormElement).querySelector('#email') as HTMLInputElement;
+    const password = (event.target as HTMLFormElement).querySelector('#password') as HTMLInputElement;
+
+    const user = this.users.find(u => u.email === email.value && u.password === password.value);
+
+    if (user) {
+      if (user.role === 'admin') {
+        console.log('login admin');
+      } else if (user.role === 'collaborator') {
+        console.log('login collaborator');
+      }
+    } else {
+      console.log('Usuário ou senha inválidos');
+    }
   }
 }

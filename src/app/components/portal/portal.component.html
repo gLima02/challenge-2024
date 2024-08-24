@@ -1,0 +1,22 @@
+<app-nav-bar></app-nav-bar>
+<div class="margem">
+  <div class="mt-4 d-flex justify-content-center">
+    <div id="main-container" class="container-fluid">
+      <h1 class="title text-start">Cursos</h1>
+      <app-modulo [title]="'Políticas da Empresa'" [modules]="[
+    { name: 'Módulo 1 | Básico I', progress: 100 },
+    { name: 'Módulo 2 | Básico II', progress: 57 },
+    { name: 'Módulo 3 | Intermediário I', progress: 33 },
+    { name: 'Módulo 4 | Intermediário II', progress: 0 },
+    { name: 'Módulo 5 | Avançado', progress: 0 }
+  ]">
+      </app-modulo>
+      <app-modulo [title]="'Conhecendo o Ambiente de Trabalho'" [modules]="[
+    { name: 'Módulo 1 | Básico I', progress: 100 },
+    { name: 'Módulo 2 | Básico II', progress: 57 },
+    { name: 'Módulo 3 | Intermediário I', progress: 33 },
+  ]">
+      </app-modulo>
+    </div>
+  </div>
+</div>

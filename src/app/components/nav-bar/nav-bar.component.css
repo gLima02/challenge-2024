@@ -1,0 +1,69 @@
+.logo {
+    width: 30%;
+    min-width: 50px;
+  }
+
+.bi {
+  color: white;
+}
+  
+  #navigation {
+    justify-content: space-between;
+  }
+  
+  @media (max-width: 500px) {
+    #navigation {
+      justify-content: center;
+      font-size: 15px;
+    }
+  }
+  
+  .nav-link:hover {
+    color: darken(var(--main-color), 10%);
+  }
+  
+/* Estilo para o botão de dropdown */
+.dropdown-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: white;
+  position: relative;
+}
+
+/* Conteúdo do dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--main-color);
+  min-width: 160px;
+  z-index: 1;
+  top: 100%; /* Posiciona o dropdown logo abaixo do botão */
+  right: 0;
+}
+
+/* Exibir o conteúdo do dropdown quando estiver aberto */
+.dropdown-content li {
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content .nav-link {
+  color: white;
+  padding: 10px 20px;
+  display: block;
+}
+
+/* Exibir o dropdown quando o estado estiver aberto */
+.dropdown-open .dropdown-content {
+  display: block;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .dropdown-content {
+    display: block;
+  }
+}
+

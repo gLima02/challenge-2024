@@ -22,7 +22,8 @@
       class="card position-absolute bg-main text-light p-4 shadow mb-5 border-light z-3"
     >
       <h3 class="text-center mb-4">Portal do Colaborador</h3>
-      <form (submit)="onLoginClick($event)">
+      <form (submit)="onLogin($event)">
+        <!-- Campo de Usuário (Email) -->
         <div class="mb-3">
           <label for="email" class="form-label">Usuário (Email)</label>
           <input
@@ -61,3 +62,20 @@
     Começar
   </a>
 </div>
+
+
+
+<!-- TESTE CONSUMO API (!!!FUNCIONANDO!!!) -->
+<!-- <div>
+  <h1>User List</h1>
+  <ul>
+    <li *ngFor="let user of users">
+      <strong>{{ user.fullName }}</strong> ({{ user.role }}) - {{ user.email }}
+      <ul>
+        <li *ngFor="let permission of user.permissions">
+          Permission: {{ permission }}
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div> -->
