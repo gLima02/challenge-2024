@@ -61,3 +61,23 @@
     border-color: white;
     color: #03358e;
 }
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  max-height: 100vh; /* Ajusta o container para a altura da visualização */
+  overflow-y: auto; /* Adiciona a rolagem vertical se necessário */
+}
+
+.bg-light {
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.module {
+  padding: 1rem;
+}
