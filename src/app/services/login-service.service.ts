@@ -38,4 +38,25 @@ export class UserService {
       })
     );
   }
+
+  getLoggedInUser(userId: string): Observable<User | undefined> {
+    return this.getUsers().pipe(
+      map(users => users.find(user => user.id === userId)),
+      catchError(error => {
+        console.error('Error fetching logged-in user:', error);
+        return throwError(() => new Error('Error fetching logged-in user'));
+      })
+    );
+  }
+
+  // Método para obter a role do usuário logado
+  getUserRole(userId: string): Observable<string> {
+    return this.getLoggedInUser(userId).pipe(
+      map(user => user ? user.role : ''),
+      catchError(error => {
+        console.error('Error fetching user role:', error);
+        return throwError(() => new Error('Error fetching user role'));
+      })
+    );
+  }
 }

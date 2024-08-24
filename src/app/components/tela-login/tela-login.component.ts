@@ -3,6 +3,7 @@ import { UserService } from '../../services/login-service.service';
 import { CommonModule, NgFor } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { routes } from '../../app.routes';
+import { BehaviorSubject } from 'rxjs';
 @Component({
   selector: 'app-tela-login',
   standalone: true,
@@ -10,7 +11,16 @@ import { routes } from '../../app.routes';
   templateUrl: './tela-login.component.html',
   styleUrl: './tela-login.component.css'
 })
+
 export class TelaLoginComponent implements OnInit {
+  loggedInUserId = new BehaviorSubject<string | null>(null);
+  setLoggedInUserId(userId: string): void {
+    this.loggedInUserId.next(userId);
+  }
+
+  getLoggedInUserId() {
+    return this.loggedInUserId.asObservable();
+  }
   users: any[] = [];
 
   constructor(private userService: UserService) { }
@@ -22,15 +32,20 @@ export class TelaLoginComponent implements OnInit {
     );
   }
 
+
   onLogin(event: Event) {
     event.preventDefault(); // Previne o comportamento padrão do formulário
-
+    
     const email = (event.target as HTMLFormElement).querySelector('#email') as HTMLInputElement;
     const password = (event.target as HTMLFormElement).querySelector('#password') as HTMLInputElement;
-
+    
     const user = this.users.find(u => u.email === email.value && u.password === password.value);
+    this.setLoggedInUserId(user.id);
+    
+    
 
     if (user) {
+
       if (user.role === 'admin') {
         console.log('login admin');
 
