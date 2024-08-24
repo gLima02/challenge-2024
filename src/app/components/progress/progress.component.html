@@ -1,18 +1,20 @@
 <app-nav-bar/>
 <div class="margem d-flex justify-content-center">
+  
     <div class="mt-4 d-flex justify-content-center">
       <div class="container main-container">
         <h1 class="title text-center">Cursos concluídos</h1>
         <div>
-            <app-progress-course
-            [title]="'Políticas da Empresa'"
-            [progress]="100"
-            ></app-progress-course>
-            <app-progress-course
-            [title]="'Conhecendo o ambiente de trabalho'"
-            [progress]="100"
-            ></app-progress-course>
+          <app-progress-course
+          title="Políticas da Empresa"
+          [progress]="100"
+          />
         </div>
+        <h1 class="title text-center mt-5">Cursos pendentes</h1>
+        <app-progress-course
+        title="Conhecendo o Ambiente de trabalho"
+        [progress]="45"
+        />
       </div>
     </div>
   </div>
