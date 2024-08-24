@@ -1,0 +1,25 @@
+<div class="header bg-main fixed-top vw-100">
+  <nav class="nav navbar-expand-lg d-flex navbar-collapse vw-100 p-3">
+    <ul id="navigation" class="nav vw-100">
+      <div class="d-flex align-items-center">
+        <img src="../../../assets/images/logo-eurofarma.png" alt="Logo Eurofarma" class="logo">
+        <li class="nav-item"><a class="nav-link text-white" href="#">Financeiro</a></li>
+      </div>
+      <div class="d-flex align-items-center" *ngIf="!isMobile">
+        <li class="nav-item"><a class="nav-link text-white" href="#">Cursos</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#">Meu Progresso</a></li>
+      </div>
+      <div class="d-flex align-items-center ms-auto" *ngIf="isMobile">
+        <button class="dropdown-button text-white" (click)="toggleDropdown()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+          </svg>
+        </button>
+        <div class="dropdown-content" *ngIf="dropdownOpen">
+          <li class="nav-item"><a class="nav-link text-white" href="#">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#">Meu Progresso</a></li>
+        </div>
+      </div>
+    </ul>
+  </nav>
+</div>

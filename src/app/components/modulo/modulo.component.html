@@ -1,0 +1,20 @@
+<div>
+  <h2 (click)="toggleModules()" class="d-flex align-items-center justify-content-between bg-main text-white p-3">
+    {{ title }}
+    <span [ngClass]="{'rotate': showModules}" class="dropdown-icon ms-2">&#9660;</span>
+  </h2>
+
+  <div [ngClass]="{'show': showModules, 'hide': !showModules}" class="modules-container mt-3">
+    <div class="module mb-3" *ngFor="let module of modules">
+      <h3>{{ module.name }}</h3>
+      <div class="d-flex align-items-center mb-1">
+        <div class="progress flex-grow-1 me-2">
+          <div class="progress-bar z-3" role="progressbar" [style.width.%]="module.progress"
+            [attr.aria-valuenow]="module.progress" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <div id="progresso-texto" class="d-flex align-items-center me-2">{{ module.progress }}%</div>
+        <button onclick="acessarCurso(title, module.name)" class="btn btn-primary btn-acess">Acessar</button>
+      </div>
+    </div>
+  </div>
+</div>
