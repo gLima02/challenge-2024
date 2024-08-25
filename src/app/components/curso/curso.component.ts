@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { NavBarComponent } from "../nav-bar/nav-bar.component";
 import { HttpClient } from '@angular/common/http'
 import { CommonModule } from '@angular/common';
@@ -14,6 +14,7 @@ import { TelaLoginComponent } from '../tela-login/tela-login.component';
   styleUrl: './curso.component.css'
 })
 export class CursoComponent implements OnInit {
+  
   role: string = ''; // Armazena a role do usuário
   editMode: { [key in 'title' | 'subtitle' | 'text1']: boolean } = {
     title: false,
@@ -27,10 +28,20 @@ export class CursoComponent implements OnInit {
 
   constructor(private userService: UserService) {}
 
+  loggedInUserId: string | null = '';
+
   ngOnInit() {
-    const loggedInUserId = '1'; // TA FUNCIONANDO MAS NAO TA DINAMICO!!!!!!!! ID 1 a 4 ADM / > 4 COLLABORATOR 
+
+    this.userService.getLoggedInUserId().subscribe(userId => {
+      this.loggedInUserId = userId;
+      console.log('Logged in user ID:', userId);
+    });
+
+    
+    const loggedInUserId = this.loggedInUserId; // TA FUNCIONANDO MAS NAO TA DINAMICO!!!!!!!! ID 1 a 4 ADM / > 4 COLLABORATOR 
     this.userService.getUserRole(loggedInUserId).subscribe(role => {
       this.role = role; // Armazena a role do usuário
+      console.log(loggedInUserId)
       console.log(role)
       console.log(this.role)
     });
@@ -49,4 +60,5 @@ export class CursoComponent implements OnInit {
     console.log(`Alterações na seção ${section} foram salvas localmente.`);
   }
 }
+
 
