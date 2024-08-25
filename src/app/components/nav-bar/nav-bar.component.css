@@ -55,6 +55,12 @@
   display: block;
 }
 
+.disabled-link {
+  pointer-events: none;
+  text-decoration: none;
+  cursor: default;
+}
+
 /* Exibir o dropdown quando o estado estiver aberto */
 .dropdown-open .dropdown-content {
   display: block;
