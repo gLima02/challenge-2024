@@ -2,6 +2,14 @@
     background-color: #0444b3;
 }
 
+
+#main-div-login {
+    width: 100vw;
+    height: 100vh;
+  }
+  
+
+
 .card {
     width: 400px;
 }
@@ -9,10 +17,12 @@
 @keyframes slide-left {
     from {
         transform: translate(0, -20vh);
-        
+
     }
+
     to {
-        transform: translate(-18vw, 0); /* Centraliza a imagem verticalmente */
+        transform: translate(-18vw, 0);
+        /* Centraliza a imagem verticalmente */
         /* Centraliza a imagem verticalmente */
     }
 }
@@ -22,7 +32,7 @@
         opacity: 1;
         transform: translateY(120px);
     }
-    
+
     to {
         opacity: 0;
         transform: translateY(80vh);
@@ -34,7 +44,7 @@
         transform: translateX(100vw);
         opacity: 0;
     }
-    
+
     to {
         transform: translateX(-15vw);
         opacity: 1;
@@ -47,14 +57,16 @@
         opacity: 0;
         pointer-events: none;
     }
-    
+
     to {
         opacity: 1;
         pointer-events: all;
     }
 }
+
 .animate-start {
-    animation: pop-in 1s forwards; /* Corrige o nome da animação */
+    animation: pop-in 1s forwards;
+    /* Corrige o nome da animação */
 }
 
 
@@ -86,8 +98,10 @@
     width: 50%;
     transform: translateY(-20vh);
     /* max-width: 50%; /* Garante que a imagem não ultrapasse a largura do container pai */
-   /* height: auto; */
+    /* height: auto; */
 }
+
+
 
 @media (max-width: 768px) {
     #formulario {
@@ -96,25 +110,30 @@
 
     #swift-start {
         width: 50%;
-        max-width: 150px; /* Limita a largura em dispositivos pequenos */
+        max-width: 150px;
+        /* Limita a largura em dispositivos pequenos */
     }
 
     #eurofarma {
-        width: 50%; /* Ajusta a largura para telas menores */
-        max-width: 200px; /* Limita a largura em dispositivos pequenos */
+        width: 50%;
+        /* Ajusta a largura para telas menores */
+        max-width: 200px;
+        /* Limita a largura em dispositivos pequenos */
     }
 }
 
 @media (max-height: 750px) {
     #eurofarma {
-        width: 50%; /* Ajusta a largura para telas menores */
-        max-width: 300px; /* Limita a largura em dispositivos pequenos */
+        width: 50%;
+        /* Ajusta a largura para telas menores */
+        max-width: 300px;
+        /* Limita a largura em dispositivos pequenos */
         margin-bottom: 20px;
     }
 }
 
 #formulario {
-transform: translateY(120px);
+    transform: translateY(120px);
 }
 
 #start {
@@ -131,9 +150,11 @@ transform: translateY(120px);
 }
 
 .welcome-text {
-    transform: translate(-17vw, calc(25vh - 20%)); /* Centraliza a imagem verticalmente */
+    transform: translate(-17vw, calc(25vh - 20%));
+    /* Centraliza a imagem verticalmente */
     pointer-events: none;
 }
+
 /* #formulário {
     position: absolute;
     } */

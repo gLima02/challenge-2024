@@ -1,26 +1,26 @@
-<!-- <app-nav-bar></app-nav-bar> -->
-<div class="mt-5 margin-top">
-  <h2 class="text-center title pb-3 pt-3">
-    <!-- Modo de edição para o título -->
-    
-    <ng-container *ngIf="editMode.title; else viewModeTitle">
-      <textarea [(ngModel)]="title" class="form-control mb-3" rows="3"></textarea>
-      <button class="btn btn-sm btn-secondary ms-3" (click)="toggleEdit('title')">
-        Salvar
-      </button>
-    </ng-container>
-  
-    <!-- Modo de visualização do título -->
-    <ng-template #viewModeTitle>
-      {{ title }}
-      <!-- Botão de edição visível apenas para usuários com role 'admin' -->
-      <button *ngIf="role === 'admin'" class="btn btn-sm btn-secondary ms-3" (click)="toggleEdit('title')">
-        Editar
-      </button>
-    </ng-template>
-  </h2>
+<app-nav-bar/>
+<div class="margem">
   <!-- Conteúdo colapsável com animação -->
-  <div class="d-flex justify-content-center align-items-center mb-5"> 
+  <div class="d-flex flex-column justify-content-center align-items-center mb-5"> 
+      <h2 class="text-center title pb-3 pt-3">
+        <!-- Modo de edição para o título -->
+        
+        <ng-container *ngIf="editMode.title; else viewModeTitle">
+          <textarea [(ngModel)]="title" class="form-control mb-3" rows="3"></textarea>
+          <button class="btn btn-sm btn-secondary ms-3" (click)="toggleEdit('title')">
+            Salvar
+          </button>
+        </ng-container>
+      
+        <!-- Modo de visualização do título -->
+        <ng-template #viewModeTitle>
+          {{ title }}
+          <!-- Botão de edição visível apenas para usuários com role 'admin' -->
+          <button *ngIf="role === 'admin'" class="btn btn-sm btn-secondary ms-3" (click)="toggleEdit('title')">
+            Editar
+          </button>
+        </ng-template>
+      </h2>
     <div class="bg-light p-4 rounded shadow-sm teste">
       <div class="module">
         <div class="text-muted" style="font-size: 1.2em;">

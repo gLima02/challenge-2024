@@ -8,12 +8,9 @@
 
 body,
 html {
-    overflow: hidden;
-    height: 100%;
-    margin: 0;
-}
-
-div {
+    /* overflow: hidden;
+    /* height: 100%;
+    margin: 0; */
     font-family: "Inter", sans-serif;
 }
 
@@ -32,14 +29,11 @@ div {
 
 .margem {
     margin-top: 3cm;
-  }.text-main {
+
+}.text-main {
     color: var(--main-color);
 }
 
 .swift-start {
     width: 25vb;
-}
-
-.margin-top{
-    margin-top: 3cm;
 }
