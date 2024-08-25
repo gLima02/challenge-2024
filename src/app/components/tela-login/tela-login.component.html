@@ -1,77 +1,37 @@
-<div
-  class="d-flex flex-column justify-content-center align-items-center vw-100 vh-100 bg-main"
->
-  <img
-    id="swift-start"
-    class="img-fluid m-2 z-3 swift-start position-absolute top-0 start-0"
-    src="../../../assets/images/logo-swiftstart.png"
-    alt="Logo SwiftStart"
-  />
-  <div
-    id="main-div"
-    class="container d-flex flex-column align-items-center justify-content-center"
-  >
-    <img
-      id="eurofarma"
-      class="img-fluid"
-      src="../../../assets/images/logo-eurofarma.png"
-      alt="Logo EuroFarma"
-    />
-    <div
-      id="formulario"
-      class="card position-absolute bg-main text-light p-4 shadow mb-5 border-light z-3"
-    >
+<div class="d-flex flex-column justify-content-center align-items-center vw-100 vh-100 bg-main">
+  <img id="swift-start" class="img-fluid m-2 z-3 swift-start position-absolute top-0 start-0"
+    src="../../../assets/images/logo-swiftstart.png" alt="Logo SwiftStart" />
+  <div id="main-div" class="container d-flex flex-column align-items-center justify-content-center">
+    <img id="eurofarma" class="img-fluid" src="../../../assets/images/logo-eurofarma.png" alt="Logo EuroFarma" />
+    <div id="formulario" class="card position-absolute bg-main text-light p-4 shadow mb-5 border-light z-3">
       <h3 class="text-center mb-4">Portal do Colaborador</h3>
       <form (submit)="onLogin($event)">
         <!-- Campo de Usuário (Email) -->
         <div class="mb-3">
           <label for="email" class="form-label">Usuário (Email)</label>
-          <input
-            type="email"
-            class="form-control"
-            id="email"
-            placeholder="Digite seu e-mail"
-            required
-          />
+          <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail" required />
         </div>
         <div class="mb-4">
           <label for="password" class="form-label">Senha</label>
-          <input
-            type="password"
-            class="form-control"
-            id="password"
-            placeholder="Digite sua senha"
-            required
-          />
+          <input type="password" class="form-control" id="password" placeholder="Digite sua senha" required />
         </div>
         <div class="d-grid">
-          <button
-            type="submit"
-            class="btn hover bg-main text-light border-light"
-          >
+          <button type="submit" class="btn hover bg-main text-light border-light">
             Login
           </button>
         </div>
       </form>
     </div>
-    <div
-      id="alert-div"
-      class="z-3 position-absolute" 
-      style="transform: translateY(320px);"
-    >
+    <div id="alert-div" class="z-3 position-absolute" style="transform: translateY(320px);">
       <span></span>
     </div>
     <h1 class="welcome-text text-light">
       Olá!<br />Bem-Vindo ao<br />novo OnBoarding!
     </h1>
   </div>
-  <a
-  id="start"
-  class="btn text-main rounded-pill fs-3 border-light"
-  [routerLink]="['/portal']"
->
-  Começar
-</a>
+  <a id="start" class="btn text-main rounded-pill fs-3 border-light" [routerLink]="['/portal']">
+    Começar
+  </a>
 
 </div>
 

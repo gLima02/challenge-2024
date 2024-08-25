@@ -21,6 +21,7 @@ export class TelaLoginComponent implements OnInit {
   getLoggedInUserId() {
     return this.loggedInUserId.asObservable();
   }
+  
   users: any[] = [];
 
   constructor(private userService: UserService) { }
@@ -32,6 +33,7 @@ export class TelaLoginComponent implements OnInit {
     );
   }
 
+  userId: Number = 0;
 
   onLogin(event: Event) {
     event.preventDefault(); // Previne o comportamento padrão do formulário
@@ -57,6 +59,10 @@ export class TelaLoginComponent implements OnInit {
       if (user.role === 'admin' || user.role === 'collaborator') {
         const alertDiv = document.querySelector('#alert-div') as HTMLElement
         alertDiv.remove()
+        this.userId = user.id
+        console.log(user.id)
+        this.userService.setLoggedInUserId(user.id.toString());
+        this.userService.setLoggedInUserName(user.firstName)
         const firstName = user.firstName
         console.log(firstName)
         const eurofarmaImg = document.querySelector('#eurofarma') as HTMLElement;
