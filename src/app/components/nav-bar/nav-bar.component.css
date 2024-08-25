@@ -32,6 +32,12 @@
   position: relative;
 }
 
+.disabled-link {
+  pointer-events: none;
+  text-decoration: none;
+  cursor: default;
+}
+
 /* Conteúdo do dropdown */
 .dropdown-content {
   display: none;
