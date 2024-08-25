@@ -1,0 +1,43 @@
+.logo {
+    width: 5%;
+    min-width: 50px;
+  }
+  
+  #navigation {
+    justify-content: space-between;
+  }
+  
+  .profile {
+    width: 14vw;
+    border: 2px solid var(--main-color);
+    border-radius: 100%;
+    height: auto;
+  }
+  
+  @media (max-width: 500px) {
+    #navigation {
+      justify-content: center;
+    }
+  }
+  
+  .title {
+    color: #03358e;
+    font-weight: bold;
+  }
+
+  .module {
+    color: #03358e;
+    border: 1px solid #03358e;
+    padding: 15px;
+    /* border-radius: 5px; */
+  }
+
+  
+  h2 {
+    transition: color 0.3s ease;
+  }
+  
+  h2:hover {
+    color: #007bff;
+  }
+  

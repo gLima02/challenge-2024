@@ -6,11 +6,12 @@ import { CommonModule } from '@angular/common';
 import { CursoComponent } from "./components/curso/curso.component";
 import { HttpClientModule } from '@angular/common/http';
 import { UserService } from './services/login-service.service';
-
+import { ProgressComponent } from './components/progress/progress.component';
+import { NavBarComponent } from "./components/nav-bar/nav-bar.component";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, TelaLoginComponent, PortalComponent, CommonModule, CursoComponent, HttpClientModule],
+  imports: [RouterOutlet, ProgressComponent, TelaLoginComponent, PortalComponent, CommonModule, CursoComponent, HttpClientModule, NavBarComponent, ProgressComponent],
   providers: [UserService],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

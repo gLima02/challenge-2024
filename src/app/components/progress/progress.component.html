@@ -1,0 +1,25 @@
+<app-nav-bar/>
+<div class="margem d-flex flex-column justify-content-center mb-5">
+  <div class="d-flex flex-row container justify-content-center align-items-center mb-5">
+    <img alt="User Image" class="profile me-5" src="https://static.vecteezy.com/system/resources/previews/005/544/718/non_2x/profile-icon-design-free-vector.jpg">
+    <div class="ms-5"><h1>Olá, User!</h1><br/>
+    <h4>Aqui você pode ver<br/> seu progresso no Onboarding.</h4>
+    </div>
+  </div>
+    <div class="mt-4 d-flex justify-content-center">
+      <div class="container main-container">
+        <h1 class="title text-center">Cursos concluídos</h1>
+        <div>
+          <app-progress-course
+          title="Políticas da Empresa"
+          [progress]="100"
+          />
+        </div>
+        <h1 class="title text-center mt-5">Cursos pendentes</h1>
+        <app-progress-course
+        title="Conhecendo o Ambiente de trabalho"
+        [progress]="45"
+        />
+      </div>
+    </div>
+  </div>
