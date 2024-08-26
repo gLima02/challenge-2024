@@ -21,6 +21,14 @@ export class TelaLoginComponent implements OnInit {
   getLoggedInUserId() {
     return this.loggedInUserId.asObservable();
   }
+
+  private loggedInUserName = new BehaviorSubject<string | null>(null);
+  setLoggedInUserName(userName: string): void {
+    this.loggedInUserName.next(userName);
+  }
+  getLoggedInUserName() {
+    return this.loggedInUserName.asObservable();
+  }
   
   users: any[] = [];
 
@@ -35,6 +43,7 @@ export class TelaLoginComponent implements OnInit {
 
   userId: Number = 0;
 
+
   onLogin(event: Event) {
     event.preventDefault(); // Previne o comportamento padrão do formulário
     
@@ -43,6 +52,7 @@ export class TelaLoginComponent implements OnInit {
     
     const user = this.users.find(u => u.email === email.value && u.password === password.value);
     this.setLoggedInUserId(user.id);
+    this.setLoggedInUserName(user.firstname)
     
     
 
@@ -62,7 +72,7 @@ export class TelaLoginComponent implements OnInit {
         this.userId = user.id
         console.log(user.id)
         this.userService.setLoggedInUserId(user.id.toString());
-        this.userService.setLoggedInUserName(user.firstName)
+        this.userService.setLoggedInUserName(user.firstName.toString());
         const firstName = user.firstName
         console.log(firstName)
         const eurofarmaImg = document.querySelector('#eurofarma') as HTMLElement;

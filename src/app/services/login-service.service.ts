@@ -70,8 +70,8 @@ export class UserService {
   }
 
   private loggedInUserName = new BehaviorSubject<string | null>(null);
-  setLoggedInUserName(userId: string): void {
-    this.loggedInUserName.next(userId);
+  setLoggedInUserName(userName: string): void {
+    this.loggedInUserName.next(userName);
   }
   getLoggedInUserName(): Observable<string | null> {
     return this.loggedInUserName.asObservable();

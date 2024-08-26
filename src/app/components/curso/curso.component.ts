@@ -38,7 +38,7 @@ export class CursoComponent implements OnInit {
     });
 
     
-    const loggedInUserId = this.loggedInUserId; // TA FUNCIONANDO MAS NAO TA DINAMICO!!!!!!!! ID 1 a 4 ADM / > 4 COLLABORATOR 
+    const loggedInUserId = this.loggedInUserId;
     this.userService.getUserRole(loggedInUserId).subscribe(role => {
       this.role = role; // Armazena a role do usuário
       console.log(loggedInUserId)
