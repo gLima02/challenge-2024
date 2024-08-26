@@ -1,20 +1,20 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { NavBarComponent } from "../nav-bar/nav-bar.component";
-import { HttpClient } from '@angular/common/http'
 import { CommonModule } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 import { UserService } from '../../services/login-service.service';
+import { NavBarComponent } from "../nav-bar/nav-bar.component";
 import { TelaLoginComponent } from '../tela-login/tela-login.component';
 
 @Component({
   selector: 'app-curso',
   standalone: true,
-  imports: [NavBarComponent, CommonModule, FormsModule, TelaLoginComponent],
+  imports: [NavBarComponent, CommonModule, FormsModule, TelaLoginComponent, RouterModule],
   templateUrl: './curso.component.html',
   styleUrl: './curso.component.css'
 })
 export class CursoComponent implements OnInit {
-  
+
   role: string = ''; // Armazena a role do usuário
   editMode: { [key in 'title' | 'subtitle' | 'text1']: boolean } = {
     title: false,
@@ -26,7 +26,7 @@ export class CursoComponent implements OnInit {
   subtitle = 'Módulo I | Introdução às Políticas da Eurofarma';
   title = 'Políticas da Empresa Eurofarma';
 
-  constructor(private userService: UserService) {}
+  constructor(private userService: UserService) { }
 
   loggedInUserId: string | null = '';
 
@@ -37,7 +37,7 @@ export class CursoComponent implements OnInit {
       console.log('Logged in user ID:', userId);
     });
 
-    
+
     const loggedInUserId = this.loggedInUserId;
     this.userService.getUserRole(loggedInUserId).subscribe(role => {
       this.role = role; // Armazena a role do usuário

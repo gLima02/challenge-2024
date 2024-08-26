@@ -1,77 +1,111 @@
-<app-nav-bar/>
+<app-nav-bar />
 <div class="margem">
   <!-- Conteúdo colapsável com animação -->
-  <div class="d-flex flex-column justify-content-center align-items-center mb-5"> 
-      <h2 class="text-center title pb-3 pt-3">
-        <!-- Modo de edição para o título -->
-        
-        <ng-container *ngIf="editMode.title; else viewModeTitle">
-          <textarea [(ngModel)]="title" class="form-control mb-3" rows="3"></textarea>
-          <button class="btn btn-sm btn-secondary ms-3" (click)="toggleEdit('title')">
-            Salvar
-          </button>
-        </ng-container>
-      
-        <!-- Modo de visualização do título -->
-        <ng-template #viewModeTitle>
-          {{ title }}
-          <!-- Botão de edição visível apenas para usuários com role 'admin' -->
-          <button *ngIf="role === 'admin'" class="btn btn-sm btn-secondary ms-3" (click)="toggleEdit('title')">
-            Editar
-          </button>
-        </ng-template>
-      </h2>
+  <div class="d-flex flex-column justify-content-center align-items-center mb-5">
+    <div class="leave z-3 position-absolute ms-3 fixed-top text-main"><svg class="btn" [routerLink]="['/portal']"
+        xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-left-circle"
+        viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+          d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z" />
+      </svg>
+    </div>
+    <h2 class="text-center title pb-3 pt-3">
+      <!-- Modo de edição para o título -->
+
+      <ng-container *ngIf="editMode.subtitle; else viewModeTitle">
+        <textarea [(ngModel)]="subtitle" class="form-control mb-3" rows="3"></textarea>
+        <button class="btn btn-sm btn-secondary ms-3" (click)="toggleEdit('subtitle')">
+          Salvar
+        </button>
+      </ng-container>
+
+      <!-- Modo de visualização do título -->
+      <ng-template #viewModeTitle>
+        <div class="d-flex flex-column">
+          <div>
+            {{ title }}
+          </div>
+          <div class="d-flex align-items-center">
+            <h4 class="mb-3 mt-2">{{ subtitle }}</h4>
+            <button *ngIf="role === 'admin'" class="btn btn-sm btn-secondary ms-3" (click)="toggleEdit('subtitle')">
+              Editar
+            </button>
+          </div>
+        </div>
+        <!-- Botão de edição visível apenas para usuários com role 'admin' -->
+      </ng-template>
+    </h2>
     <div class="bg-light p-4 rounded shadow-sm teste">
       <div class="module">
         <div class="text-muted" style="font-size: 1.2em;">
-          <img src="../../../assets/images/logotipo-eurofarma-350x350_.png" class="float-end ms-3 mb-3 img-fluid rounded" alt="Imagem Descritiva">
+          <img src="../../../assets/images/logotipo-eurofarma-350x350_.png"
+            class="float-end ms-3 mb-3 img-fluid rounded" alt="Imagem Descritiva">
 
           <p>
-            A Eurofarma é uma empresa comprometida com a excelência e integridade em todas as suas operações. As políticas 
-            da empresa são fundamentais para garantir um ambiente de trabalho ético, seguro e produtivo para todos os colaboradores. 
-            Este módulo oferece uma visão geral das principais políticas e diretrizes que regem nossas práticas diárias e interações profissionais.
+            A Eurofarma é uma empresa comprometida com a excelência e integridade em todas as suas operações. As
+            políticas
+            da empresa são fundamentais para garantir um ambiente de trabalho ético, seguro e produtivo para todos os
+            colaboradores.
+            Este módulo oferece uma visão geral das principais políticas e diretrizes que regem nossas práticas diárias
+            e interações profissionais.
           </p>
-  
+
           <p>
-            As políticas de conduta da Eurofarma estabelecem os padrões esperados de comportamento em todas as esferas da empresa. 
-            Os colaboradores são incentivados a atuar com transparência, respeito e honestidade em todas as suas ações. É imperativo 
-            que todos os membros da equipe compreendam e sigam essas diretrizes para promover um ambiente de trabalho positivo e colaborativo.
+            As políticas de conduta da Eurofarma estabelecem os padrões esperados de comportamento em todas as esferas
+            da empresa.
+            Os colaboradores são incentivados a atuar com transparência, respeito e honestidade em todas as suas ações.
+            É imperativo
+            que todos os membros da equipe compreendam e sigam essas diretrizes para promover um ambiente de trabalho
+            positivo e colaborativo.
           </p>
-  
+
           <p>
-            A política de segurança no trabalho é uma das nossas principais prioridades. A Eurofarma se dedica a fornecer um ambiente 
-            de trabalho seguro, identificando e mitigando riscos e promovendo práticas de segurança robustas. Todos os colaboradores 
-            devem estar cientes das normas de segurança e participar ativamente dos treinamentos oferecidos para garantir a segurança de todos 
+            A política de segurança no trabalho é uma das nossas principais prioridades. A Eurofarma se dedica a
+            fornecer um ambiente
+            de trabalho seguro, identificando e mitigando riscos e promovendo práticas de segurança robustas. Todos os
+            colaboradores
+            devem estar cientes das normas de segurança e participar ativamente dos treinamentos oferecidos para
+            garantir a segurança de todos
             no ambiente de trabalho.
           </p>
-  
+
           <p>
-            Além das políticas de segurança, a Eurofarma também adota uma abordagem rigorosa para a proteção de dados e informações confidenciais. 
-            A empresa implementa medidas de segurança para proteger as informações sensíveis de clientes e colaboradores, e todos os funcionários 
+            Além das políticas de segurança, a Eurofarma também adota uma abordagem rigorosa para a proteção de dados e
+            informações confidenciais.
+            A empresa implementa medidas de segurança para proteger as informações sensíveis de clientes e
+            colaboradores, e todos os funcionários
             devem seguir os procedimentos estabelecidos para garantir a confidencialidade e integridade dos dados.
           </p>
-  
+
           <p>
-            A política de responsabilidade social da Eurofarma reflete nosso compromisso com a comunidade e o meio ambiente. A empresa apoia diversas 
-            iniciativas de responsabilidade social e espera que todos os colaboradores se envolvam em projetos e atividades que promovam o bem-estar 
-            social e ambiental. O compromisso com práticas sustentáveis é essencial para nossa missão de promover um futuro melhor para todos.
+            A política de responsabilidade social da Eurofarma reflete nosso compromisso com a comunidade e o meio
+            ambiente. A empresa apoia diversas
+            iniciativas de responsabilidade social e espera que todos os colaboradores se envolvam em projetos e
+            atividades que promovam o bem-estar
+            social e ambiental. O compromisso com práticas sustentáveis é essencial para nossa missão de promover um
+            futuro melhor para todos.
           </p>
-  
+
           <p>
-            Em resumo, as políticas da Eurofarma são projetadas para garantir que todos os colaboradores atuem com a mais alta ética e responsabilidade, 
-            promovendo um ambiente de trabalho seguro, respeitoso e produtivo. Este módulo serve como uma introdução às principais diretrizes e normas 
-            que devem ser seguidas e será o alicerce para os módulos seguintes que detalharão aspectos específicos das políticas da empresa.
+            Em resumo, as políticas da Eurofarma são projetadas para garantir que todos os colaboradores atuem com a
+            mais alta ética e responsabilidade,
+            promovendo um ambiente de trabalho seguro, respeitoso e produtivo. Este módulo serve como uma introdução às
+            principais diretrizes e normas
+            que devem ser seguidas e será o alicerce para os módulos seguintes que detalharão aspectos específicos das
+            políticas da empresa.
           </p>
-  
+
           <p>
-            A compreensão e a adesão a essas políticas são cruciais para o sucesso e a integridade da Eurofarma, e contamos com o compromisso de todos 
+            A compreensão e a adesão a essas políticas são cruciais para o sucesso e a integridade da Eurofarma, e
+            contamos com o compromisso de todos
             para manter os mais altos padrões de conduta profissional e responsabilidade.
           </p>
           <div class="mt-4">
             <h4 class="text-center mb-4">Questionário de Avaliação</h4>
             <form id="quiz-form">
               <div class="row mb-3">
-                <label for="q1" class="col-sm-12 col-md-4 col-form-label">1. Qual é a principal prioridade da Eurofarma em relação ao ambiente de trabalho?</label>
+                <label for="q1" class="col-sm-12 col-md-4 col-form-label">1. Qual é a principal prioridade da Eurofarma
+                  em relação ao ambiente de trabalho?</label>
                 <div class="col-sm-12 col-md-8">
                   <select id="q1" class="form-select" required>
                     <option value="" disabled selected>Selecione uma opção</option>
@@ -82,9 +116,10 @@
                   </select>
                 </div>
               </div>
-          
+
               <div class="row mb-3">
-                <label for="q2" class="col-sm-12 col-md-4 col-form-label">2. O que é esperado dos colaboradores em relação às políticas de conduta?</label>
+                <label for="q2" class="col-sm-12 col-md-4 col-form-label">2. O que é esperado dos colaboradores em
+                  relação às políticas de conduta?</label>
                 <div class="col-sm-12 col-md-8">
                   <select id="q2" class="form-select" required>
                     <option value="" disabled selected>Selecione uma opção</option>
@@ -95,9 +130,10 @@
                   </select>
                 </div>
               </div>
-          
+
               <div class="row mb-3">
-                <label for="q3" class="col-sm-12 col-md-4 col-form-label">3. Como a Eurofarma protege as informações confidenciais?</label>
+                <label for="q3" class="col-sm-12 col-md-4 col-form-label">3. Como a Eurofarma protege as informações
+                  confidenciais?</label>
                 <div class="col-sm-12 col-md-8">
                   <select id="q3" class="form-select" required>
                     <option value="" disabled selected>Selecione uma opção</option>
@@ -108,9 +144,10 @@
                   </select>
                 </div>
               </div>
-          
+
               <div class="row mb-3">
-                <label for="q4" class="col-sm-12 col-md-4 col-form-label">4. Qual é o papel das políticas de responsabilidade social da Eurofarma?</label>
+                <label for="q4" class="col-sm-12 col-md-4 col-form-label">4. Qual é o papel das políticas de
+                  responsabilidade social da Eurofarma?</label>
                 <div class="col-sm-12 col-md-8">
                   <select id="q4" class="form-select" required>
                     <option value="" disabled selected>Selecione uma opção</option>
@@ -121,7 +158,7 @@
                   </select>
                 </div>
               </div>
-          
+
               <div class="d-grid mb-1">
                 <button type="submit" class="btn btn-primary">Enviar Respostas</button>
               </div>

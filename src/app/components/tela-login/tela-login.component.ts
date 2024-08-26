@@ -1,9 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { UserService } from '../../services/login-service.service';
 import { CommonModule, NgFor } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { routes } from '../../app.routes';
 import { BehaviorSubject } from 'rxjs';
+import { UserService } from '../../services/login-service.service';
 @Component({
   selector: 'app-tela-login',
   standalone: true,
@@ -29,12 +28,14 @@ export class TelaLoginComponent implements OnInit {
   getLoggedInUserName() {
     return this.loggedInUserName.asObservable();
   }
-  
+
   users: any[] = [];
 
   constructor(private userService: UserService) { }
 
   ngOnInit() {
+    const html = document.querySelector('html') as HTMLElement
+    html.style.overflow = 'hidden'
     this.userService.getUsers().subscribe(
       (data) => this.users = data,
       (error) => console.error('Error loading users:', error)
@@ -46,15 +47,15 @@ export class TelaLoginComponent implements OnInit {
 
   onLogin(event: Event) {
     event.preventDefault(); // Previne o comportamento padrão do formulário
-    
+
     const email = (event.target as HTMLFormElement).querySelector('#email') as HTMLInputElement;
     const password = (event.target as HTMLFormElement).querySelector('#password') as HTMLInputElement;
-    
+
     const user = this.users.find(u => u.email === email.value && u.password === password.value);
     this.setLoggedInUserId(user.id);
     this.setLoggedInUserName(user.firstname)
-    
-    
+
+
 
     if (user) {
 
