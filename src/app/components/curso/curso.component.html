@@ -1,8 +1,7 @@
 <app-nav-bar />
 <div class="margem">
-  <!-- Conteúdo colapsável com animação -->
   <div class="d-flex flex-column justify-content-center align-items-center mb-5">
-    <div class="leave z-3 position-absolute ms-3 fixed-top text-main"><svg class="btn" [routerLink]="['/portal']"
+    <div class="leave z-3 ms-3 text-main position-absolute start-0 top-0"><svg class="btn" [routerLink]="['/portal']"
         xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-left-circle"
         viewBox="0 0 16 16">
         <path fill-rule="evenodd"
@@ -10,16 +9,12 @@
       </svg>
     </div>
     <h2 class="text-center title pb-3 pt-3">
-      <!-- Modo de edição para o título -->
-
       <ng-container *ngIf="editMode.subtitle; else viewModeTitle">
         <textarea [(ngModel)]="subtitle" class="form-control mb-3" rows="3"></textarea>
         <button class="btn btn-sm btn-secondary ms-3" (click)="toggleEdit('subtitle')">
           Salvar
         </button>
       </ng-container>
-
-      <!-- Modo de visualização do título -->
       <ng-template #viewModeTitle>
         <div class="d-flex flex-column">
           <div>
@@ -32,7 +27,6 @@
             </button>
           </div>
         </div>
-        <!-- Botão de edição visível apenas para usuários com role 'admin' -->
       </ng-template>
     </h2>
     <div class="bg-light p-4 rounded shadow-sm teste">

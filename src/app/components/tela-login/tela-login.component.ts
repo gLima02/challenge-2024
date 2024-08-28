@@ -25,6 +25,7 @@ export class TelaLoginComponent implements OnInit {
   setLoggedInUserName(userName: string): void {
     this.loggedInUserName.next(userName);
   }
+  
   getLoggedInUserName() {
     return this.loggedInUserName.asObservable();
   }
@@ -52,6 +53,25 @@ export class TelaLoginComponent implements OnInit {
     const password = (event.target as HTMLFormElement).querySelector('#password') as HTMLInputElement;
 
     const user = this.users.find(u => u.email === email.value && u.password === password.value);
+    console.log(user) 
+    if (!user) {
+      if (!user) {
+        const alertDiv = document.querySelector('#alert-div') as HTMLElement
+        const inputPassword = document.querySelector('#pass-div') as HTMLElement
+        inputPassword.innerHTML = ` <label for="password" class="form-label">Senha</label>
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              placeholder="Digite sua senha"
+              required
+            />`
+        alertDiv.innerHTML = `<div class="alert alert-danger" role="alert">
+   Erro: Email ou senha inválidos
+  </div>`
+        console.log('Erro: Usuário ou senha inválidos');
+      }
+    }
     this.setLoggedInUserId(user.id);
     this.setLoggedInUserName(user.firstname)
 

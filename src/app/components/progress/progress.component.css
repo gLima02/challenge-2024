@@ -14,7 +14,16 @@
   @media (max-width: 500px) {
     #navigation {
       justify-content: center;
+      
     }
+  }
+
+  .nome-user {
+    font-size: 3vw;
+  }
+
+  .margem {
+    margin-top: 4cm;
   }
   
   .title {
