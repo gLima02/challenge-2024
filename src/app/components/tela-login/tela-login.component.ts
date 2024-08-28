@@ -57,15 +57,15 @@ export class TelaLoginComponent implements OnInit {
     if (!user) {
       if (!user) {
         const alertDiv = document.querySelector('#alert-div') as HTMLElement
-        const inputPassword = document.querySelector('#pass-div') as HTMLElement
-        inputPassword.innerHTML = ` <label for="password" class="form-label">Senha</label>
-            <input
-              type="password"
-              class="form-control"
-              id="password"
-              placeholder="Digite sua senha"
-              required
-            />`
+        // const inputPassword = document.querySelector('#pass-div') as HTMLElement
+        // inputPassword.innerHTML = ` <label for="password" class="form-label">Senha</label>
+        //     <input
+        //       type="password"
+        //       class="form-control"
+        //       id="password"
+        //       placeholder="Digite sua senha"
+        //       required
+        //     />`
         alertDiv.innerHTML = `<div class="alert alert-danger" role="alert">
    Erro: Email ou senha inválidos
   </div>`
