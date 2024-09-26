@@ -69,4 +69,38 @@ export class CursoComponent implements OnInit {
     console.log(`Alterações na seção ${section} foram salvas localmente.`);
     // Aqui você pode adicionar lógica para salvar as alterações permanentemente (ex: API)
   }
+
+  answers = {
+    q1: '',
+    q2: '',
+    q3: '',
+    q4: ''
+  };
+
+  // Respostas corretas
+  correctAnswers = {
+    q1: 'b',
+    q2: 'a',
+    q3: 'a',
+    q4: 'a'
+  };
+
+  resultMessage: string | null = null;
+
+  checkAnswers() {
+    // Contador de respostas corretas
+    let correctCount = 0;
+
+    // Verifica as respostas
+    Object.keys(this.answers).forEach((key) => {
+      if (this.answers[key as keyof typeof this.answers] === this.correctAnswers[key as keyof typeof this.correctAnswers]) {
+        correctCount++;
+      }
+    });
+
+    // Exibe a mensagem com o resultado
+    this.resultMessage = `Você acertou ${correctCount} de 4 questões.`;
+  }
+
+  
 }
