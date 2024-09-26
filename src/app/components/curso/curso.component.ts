@@ -52,6 +52,22 @@ export class CursoComponent implements OnInit {
         this.role = role; // Armazena a role do usuário
         console.log('Role do usuário:', role);
       });
+
+      const savedTitle = localStorage.getItem('title');
+    const savedSubtitle = localStorage.getItem('subtitle');
+    const savedParagraph1 = localStorage.getItem('paragraph1');
+    const savedParagraph2 = localStorage.getItem('paragraph2');
+    const savedParagraph3 = localStorage.getItem('paragraph3');
+    const savedParagraph4 = localStorage.getItem('paragraph4');
+    const savedParagraph5 = localStorage.getItem('paragraph5');
+
+    if (savedTitle) this.title = savedTitle;
+    if (savedSubtitle) this.subtitle = savedSubtitle;
+    if (savedParagraph1) this.paragraph1 = savedParagraph1;
+    if (savedParagraph2) this.paragraph2 = savedParagraph2;
+    if (savedParagraph3) this.paragraph3 = savedParagraph3;
+    if (savedParagraph4) this.paragraph4 = savedParagraph4;
+    if (savedParagraph5) this.paragraph5 = savedParagraph5;
     });
   }
 
@@ -67,6 +83,32 @@ export class CursoComponent implements OnInit {
   // Função para salvar as mudanças locais
   saveChanges(section: 'title' | 'subtitle' | 'paragraph1' | 'paragraph2' | 'paragraph3' | 'paragraph4' | 'paragraph5' | 'paragraph6') {
     console.log(`Alterações na seção ${section} foram salvas localmente.`);
+
+    switch (section) {
+      case 'title':
+        localStorage.setItem('title', this.title);
+        break;
+      case 'subtitle':
+        localStorage.setItem('subtitle', this.subtitle);
+        break;
+      case 'paragraph1':
+        localStorage.setItem('paragraph1', this.paragraph1);
+        break;
+      case 'paragraph2':
+        localStorage.setItem('paragraph2', this.paragraph2);
+        break;
+      case 'paragraph3':
+        localStorage.setItem('paragraph3', this.paragraph3);
+        break;
+      case 'paragraph4':
+        localStorage.setItem('paragraph4', this.paragraph4);
+        break;
+      case 'paragraph5':
+        localStorage.setItem('paragraph5', this.paragraph5);
+        break;
+    }
+    console.log(`Alterações na seção ${section} foram salvas no localStorage.`);
+  
     // Aqui você pode adicionar lógica para salvar as alterações permanentemente (ex: API)
   }
 
