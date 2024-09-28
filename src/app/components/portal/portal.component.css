@@ -25,6 +25,10 @@
   color: #03358e;
   font-weight: bold;
 }
+.criar{
+  color: #03358e;
+  font-size: +1%;
+}
 
 .nav-link:hover {
   color: darken(var(--main-color), 10%);
