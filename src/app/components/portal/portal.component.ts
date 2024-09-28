@@ -16,11 +16,24 @@ import { UserService } from '../../services/login-service.service';
 })
 export class PortalComponent implements OnInit {
   courses: any[] = []; // Array para armazenar os cursos
+  isAdmin: boolean = false; // Variável para armazenar se o usuário é admin
 
   constructor(private http: HttpClient, private userService: UserService) { }
 
   ngOnInit() {
     this.getCourses(); // Chama a função para obter os cursos ao inicializar
+    this.checkAdmin(); // Verifica se o usuário é admin
+  }
+
+  // Função para verificar se o usuário logado é admin
+  checkAdmin() {
+    this.userService.getLoggedInUserId().subscribe(userId => {
+      if (userId) {
+        this.userService.getUserRole(userId).subscribe(role => {
+          this.isAdmin = (role === 'admin'); // Se o role for admin, define isAdmin como true
+        });
+      }
+    });
   }
 
   getCourses() {
