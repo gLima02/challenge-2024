@@ -71,8 +71,12 @@ let users = {
         title: 'Políticas da Empresa Eurofarma',
         subtitle: 'Módulo I | Introdução às Políticas da Eurofarma',
         paragraphs: {
-          paragraph1: 'Texto do primeiro parágrafo...',
-          paragraph2: 'Texto do segundo parágrafo...',
+          paragraph1: 'A Eurofarma é uma empresa comprometida com a excelência e integridade em todas as suas operações. Aspolíticasda empresa são fundamentais para garantir um ambiente de trabalho ético, seguro e produtivo para todos oscolaboradores.Este módulo oferece uma visão geral das principais políticas e diretrizes que regem nossas práticas diáriase interações profissionais. As políticas de conduta da Eurofarma estabelecem os padrões esperados de comportamento em todas as esferasda empresa.Os colaboradores são incentivados a atuar com transparência, respeito e honestidade em todas as suas ações.É imperativoque todos os membros da equipe compreendam e sigam essas diretrizes para promover um ambiente de trabalhopositivo e colaborativo.',
+          paragraph2: 'A política de segurança no trabalho é uma das nossas principais prioridades. A Eurofarma se dedica afornecer um ambientede trabalho seguro, identificando e mitigando riscos e promovendo práticas de segurança robustas. Todos oscolaboradoresdevem estar cientes das normas de segurança e participar ativamente dos treinamentos oferecidos paragarantir a segurança de todos no ambiente de trabalho. Além das políticas de segurança, a Eurofarma também adota uma abordagem rigorosa para a proteção de dados einformações confidenciais.A empresa implementa medidas de segurança para proteger as informações sensíveis de clientes ecolaboradores, e todos os funcionáriosdevem seguir os procedimentos estabelecidos para garantir a confidencialidade e integridade dos dados.',
+          paragraph3: 'A política de responsabilidade social da Eurofarma reflete nosso compromisso com a comunidade e o meioambiente. A empresa apoia diversasiniciativas de responsabilidade social e espera que todos os colaboradores se envolvam em projetos eatividades que promovam o bem-estarsocial e ambiental. O compromisso com práticas sustentáveis é essencial para nossa missão de promover um futuro melhor para todos.',
+          paragraph4: 'Em resumo, as políticas da Eurofarma são projetadas para garantir que todos os colaboradores atuem com amais alta ética e responsabilidade,promovendo um ambiente de trabalho seguro, respeitoso e produtivo. Este módulo serve como uma introdução àsprincipais diretrizes e normasque devem ser seguidas e será o alicerce para os módulos seguintes que detalharão aspectos específicos daspolíticas da empresa. A compreensão e a adesão a essas políticas são cruciais para o sucesso e a integridade da Eurofarma, econtamos com o compromisso de todospara manter os mais altos padrões de conduta profissional e responsabilidade.',
+          paragraph5: 'O compromisso da Eurofarma com a conformidade normativa, ou compliance, é um dos pilares fundamentais que sustenta nossas operações e reputação no mercado. A política de compliance da empresa abrange uma série de diretrizes que visam garantir que todas as atividades e práticas empresariais estejam em conformidade com as leis, regulamentos e normas aplicáveis, tanto em âmbito nacional quanto internacional. Nosso objetivo é assegurar que todos os colaboradores, fornecedores e parceiros comerciais compreendam e sigam os requisitos legais, éticos e regulamentares que regem o setor em que atuamos.',
+          paragraph6: 'A transparência é um dos princípios norteadores da política de compliance da Eurofarma. Todas as nossas interações comerciais são pautadas pela integridade, com o objetivo de construir e manter uma relação de confiança com nossos stakeholders. Isso inclui a prestação de informações claras e completas a órgãos reguladores, acionistas, clientes e colaboradores, sempre respeitando as regras e regulamentos estabelecidos pelas autoridades competentes. Cada colaborador, independentemente do seu cargo ou função, é responsável por agir de maneira ética e em conformidade com as normas internas e externas.'
         },
       },
     },
@@ -90,8 +94,13 @@ let users = {
         title: 'Políticas da Empresa Eurofarma',
         subtitle: 'Módulo I | Introdução às Políticas da Eurofarma',
         paragraphs: {
-          paragraph1: 'Texto do primeiro parágrafo...',
-          paragraph2: 'Texto do segundo parágrafo...',
+          paragraph1: 'A Eurofarma é uma empresa comprometida com a excelência e integridade em todas as suas operações. Aspolíticasda empresa são fundamentais para garantir um ambiente de trabalho ético, seguro e produtivo para todos oscolaboradores.Este módulo oferece uma visão geral das principais políticas e diretrizes que regem nossas práticas diáriase interações profissionais. As políticas de conduta da Eurofarma estabelecem os padrões esperados de comportamento em todas as esferasda empresa.Os colaboradores são incentivados a atuar com transparência, respeito e honestidade em todas as suas ações.É imperativoque todos os membros da equipe compreendam e sigam essas diretrizes para promover um ambiente de trabalhopositivo e colaborativo.',
+          paragraph2: 'A política de segurança no trabalho é uma das nossas principais prioridades. A Eurofarma se dedica afornecer um ambientede trabalho seguro, identificando e mitigando riscos e promovendo práticas de segurança robustas. Todos oscolaboradoresdevem estar cientes das normas de segurança e participar ativamente dos treinamentos oferecidos paragarantir a segurança de todos no ambiente de trabalho. Além das políticas de segurança, a Eurofarma também adota uma abordagem rigorosa para a proteção de dados einformações confidenciais.A empresa implementa medidas de segurança para proteger as informações sensíveis de clientes ecolaboradores, e todos os funcionáriosdevem seguir os procedimentos estabelecidos para garantir a confidencialidade e integridade dos dados.',
+          paragraph3: 'A política de responsabilidade social da Eurofarma reflete nosso compromisso com a comunidade e o meioambiente. A empresa apoia diversasiniciativas de responsabilidade social e espera que todos os colaboradores se envolvam em projetos eatividades que promovam o bem-estarsocial e ambiental. O compromisso com práticas sustentáveis é essencial para nossa missão de promover um futuro melhor para todos.',
+          paragraph4: 'Em resumo, as políticas da Eurofarma são projetadas para garantir que todos os colaboradores atuem com amais alta ética e responsabilidade,promovendo um ambiente de trabalho seguro, respeitoso e produtivo. Este módulo serve como uma introdução àsprincipais diretrizes e normasque devem ser seguidas e será o alicerce para os módulos seguintes que detalharão aspectos específicos daspolíticas da empresa. A compreensão e a adesão a essas políticas são cruciais para o sucesso e a integridade da Eurofarma, econtamos com o compromisso de todospara manter os mais altos padrões de conduta profissional e responsabilidade.',
+          paragraph5: 'O compromisso da Eurofarma com a conformidade normativa, ou compliance, é um dos pilares fundamentais que sustenta nossas operações e reputação no mercado. A política de compliance da empresa abrange uma série de diretrizes que visam garantir que todas as atividades e práticas empresariais estejam em conformidade com as leis, regulamentos e normas aplicáveis, tanto em âmbito nacional quanto internacional. Nosso objetivo é assegurar que todos os colaboradores, fornecedores e parceiros comerciais compreendam e sigam os requisitos legais, éticos e regulamentares que regem o setor em que atuamos.',
+          paragraph6: 'A transparência é um dos princípios norteadores da política de compliance da Eurofarma. Todas as nossas interações comerciais são pautadas pela integridade, com o objetivo de construir e manter uma relação de confiança com nossos stakeholders. Isso inclui a prestação de informações claras e completas a órgãos reguladores, acionistas, clientes e colaboradores, sempre respeitando as regras e regulamentos estabelecidos pelas autoridades competentes. Cada colaborador, independentemente do seu cargo ou função, é responsável por agir de maneira ética e em conformidade com as normas internas e externas.'
+       
         },
       },
     },
@@ -109,8 +118,13 @@ let users = {
         title: 'Políticas da Empresa Eurofarma',
         subtitle: 'Módulo I | Introdução às Políticas da Eurofarma',
         paragraphs: {
-          paragraph1: 'Texto do primeiro parágrafo...',
-          paragraph2: 'Texto do segundo parágrafo...',
+          paragraph1: 'A Eurofarma é uma empresa comprometida com a excelência e integridade em todas as suas operações. Aspolíticasda empresa são fundamentais para garantir um ambiente de trabalho ético, seguro e produtivo para todos oscolaboradores.Este módulo oferece uma visão geral das principais políticas e diretrizes que regem nossas práticas diáriase interações profissionais. As políticas de conduta da Eurofarma estabelecem os padrões esperados de comportamento em todas as esferasda empresa.Os colaboradores são incentivados a atuar com transparência, respeito e honestidade em todas as suas ações.É imperativoque todos os membros da equipe compreendam e sigam essas diretrizes para promover um ambiente de trabalhopositivo e colaborativo.',
+          paragraph2: 'A política de segurança no trabalho é uma das nossas principais prioridades. A Eurofarma se dedica afornecer um ambientede trabalho seguro, identificando e mitigando riscos e promovendo práticas de segurança robustas. Todos oscolaboradoresdevem estar cientes das normas de segurança e participar ativamente dos treinamentos oferecidos paragarantir a segurança de todos no ambiente de trabalho. Além das políticas de segurança, a Eurofarma também adota uma abordagem rigorosa para a proteção de dados einformações confidenciais.A empresa implementa medidas de segurança para proteger as informações sensíveis de clientes ecolaboradores, e todos os funcionáriosdevem seguir os procedimentos estabelecidos para garantir a confidencialidade e integridade dos dados.',
+          paragraph3: 'A política de responsabilidade social da Eurofarma reflete nosso compromisso com a comunidade e o meioambiente. A empresa apoia diversasiniciativas de responsabilidade social e espera que todos os colaboradores se envolvam em projetos eatividades que promovam o bem-estarsocial e ambiental. O compromisso com práticas sustentáveis é essencial para nossa missão de promover um futuro melhor para todos.',
+          paragraph4: 'Em resumo, as políticas da Eurofarma são projetadas para garantir que todos os colaboradores atuem com amais alta ética e responsabilidade,promovendo um ambiente de trabalho seguro, respeitoso e produtivo. Este módulo serve como uma introdução àsprincipais diretrizes e normasque devem ser seguidas e será o alicerce para os módulos seguintes que detalharão aspectos específicos daspolíticas da empresa. A compreensão e a adesão a essas políticas são cruciais para o sucesso e a integridade da Eurofarma, econtamos com o compromisso de todospara manter os mais altos padrões de conduta profissional e responsabilidade.',
+          paragraph5: 'O compromisso da Eurofarma com a conformidade normativa, ou compliance, é um dos pilares fundamentais que sustenta nossas operações e reputação no mercado. A política de compliance da empresa abrange uma série de diretrizes que visam garantir que todas as atividades e práticas empresariais estejam em conformidade com as leis, regulamentos e normas aplicáveis, tanto em âmbito nacional quanto internacional. Nosso objetivo é assegurar que todos os colaboradores, fornecedores e parceiros comerciais compreendam e sigam os requisitos legais, éticos e regulamentares que regem o setor em que atuamos.',
+          paragraph6: 'A transparência é um dos princípios norteadores da política de compliance da Eurofarma. Todas as nossas interações comerciais são pautadas pela integridade, com o objetivo de construir e manter uma relação de confiança com nossos stakeholders. Isso inclui a prestação de informações claras e completas a órgãos reguladores, acionistas, clientes e colaboradores, sempre respeitando as regras e regulamentos estabelecidos pelas autoridades competentes. Cada colaborador, independentemente do seu cargo ou função, é responsável por agir de maneira ética e em conformidade com as normas internas e externas.'
+       
         },
       },
     },
@@ -128,8 +142,13 @@ let users = {
         title: 'Políticas da Empresa Eurofarma',
         subtitle: 'Módulo I | Introdução às Políticas da Eurofarma',
         paragraphs: {
-          paragraph1: 'Texto do primeiro parágrafo...',
-          paragraph2: 'Texto do segundo parágrafo...',
+          paragraph1: 'A Eurofarma é uma empresa comprometida com a excelência e integridade em todas as suas operações. Aspolíticasda empresa são fundamentais para garantir um ambiente de trabalho ético, seguro e produtivo para todos oscolaboradores.Este módulo oferece uma visão geral das principais políticas e diretrizes que regem nossas práticas diáriase interações profissionais. As políticas de conduta da Eurofarma estabelecem os padrões esperados de comportamento em todas as esferasda empresa.Os colaboradores são incentivados a atuar com transparência, respeito e honestidade em todas as suas ações.É imperativoque todos os membros da equipe compreendam e sigam essas diretrizes para promover um ambiente de trabalhopositivo e colaborativo.',
+          paragraph2: 'A política de segurança no trabalho é uma das nossas principais prioridades. A Eurofarma se dedica afornecer um ambientede trabalho seguro, identificando e mitigando riscos e promovendo práticas de segurança robustas. Todos oscolaboradoresdevem estar cientes das normas de segurança e participar ativamente dos treinamentos oferecidos paragarantir a segurança de todos no ambiente de trabalho. Além das políticas de segurança, a Eurofarma também adota uma abordagem rigorosa para a proteção de dados einformações confidenciais.A empresa implementa medidas de segurança para proteger as informações sensíveis de clientes ecolaboradores, e todos os funcionáriosdevem seguir os procedimentos estabelecidos para garantir a confidencialidade e integridade dos dados.',
+          paragraph3: 'A política de responsabilidade social da Eurofarma reflete nosso compromisso com a comunidade e o meioambiente. A empresa apoia diversasiniciativas de responsabilidade social e espera que todos os colaboradores se envolvam em projetos eatividades que promovam o bem-estarsocial e ambiental. O compromisso com práticas sustentáveis é essencial para nossa missão de promover um futuro melhor para todos.',
+          paragraph4: 'Em resumo, as políticas da Eurofarma são projetadas para garantir que todos os colaboradores atuem com amais alta ética e responsabilidade,promovendo um ambiente de trabalho seguro, respeitoso e produtivo. Este módulo serve como uma introdução àsprincipais diretrizes e normasque devem ser seguidas e será o alicerce para os módulos seguintes que detalharão aspectos específicos daspolíticas da empresa. A compreensão e a adesão a essas políticas são cruciais para o sucesso e a integridade da Eurofarma, econtamos com o compromisso de todospara manter os mais altos padrões de conduta profissional e responsabilidade.',
+          paragraph5: 'O compromisso da Eurofarma com a conformidade normativa, ou compliance, é um dos pilares fundamentais que sustenta nossas operações e reputação no mercado. A política de compliance da empresa abrange uma série de diretrizes que visam garantir que todas as atividades e práticas empresariais estejam em conformidade com as leis, regulamentos e normas aplicáveis, tanto em âmbito nacional quanto internacional. Nosso objetivo é assegurar que todos os colaboradores, fornecedores e parceiros comerciais compreendam e sigam os requisitos legais, éticos e regulamentares que regem o setor em que atuamos.',
+          paragraph6: 'A transparência é um dos princípios norteadores da política de compliance da Eurofarma. Todas as nossas interações comerciais são pautadas pela integridade, com o objetivo de construir e manter uma relação de confiança com nossos stakeholders. Isso inclui a prestação de informações claras e completas a órgãos reguladores, acionistas, clientes e colaboradores, sempre respeitando as regras e regulamentos estabelecidos pelas autoridades competentes. Cada colaborador, independentemente do seu cargo ou função, é responsável por agir de maneira ética e em conformidade com as normas internas e externas.'
+       
         },
       },
     },
@@ -147,8 +166,13 @@ let users = {
         title: 'Políticas da Empresa Eurofarma',
         subtitle: 'Módulo I | Introdução às Políticas da Eurofarma',
         paragraphs: {
-          paragraph1: 'Texto do primeiro parágrafo...',
-          paragraph2: 'Texto do segundo parágrafo...',
+          paragraph1: 'A Eurofarma é uma empresa comprometida com a excelência e integridade em todas as suas operações. Aspolíticasda empresa são fundamentais para garantir um ambiente de trabalho ético, seguro e produtivo para todos oscolaboradores.Este módulo oferece uma visão geral das principais políticas e diretrizes que regem nossas práticas diáriase interações profissionais. As políticas de conduta da Eurofarma estabelecem os padrões esperados de comportamento em todas as esferasda empresa.Os colaboradores são incentivados a atuar com transparência, respeito e honestidade em todas as suas ações.É imperativoque todos os membros da equipe compreendam e sigam essas diretrizes para promover um ambiente de trabalhopositivo e colaborativo.',
+          paragraph2: 'A política de segurança no trabalho é uma das nossas principais prioridades. A Eurofarma se dedica afornecer um ambientede trabalho seguro, identificando e mitigando riscos e promovendo práticas de segurança robustas. Todos oscolaboradoresdevem estar cientes das normas de segurança e participar ativamente dos treinamentos oferecidos paragarantir a segurança de todos no ambiente de trabalho. Além das políticas de segurança, a Eurofarma também adota uma abordagem rigorosa para a proteção de dados einformações confidenciais.A empresa implementa medidas de segurança para proteger as informações sensíveis de clientes ecolaboradores, e todos os funcionáriosdevem seguir os procedimentos estabelecidos para garantir a confidencialidade e integridade dos dados.',
+          paragraph3: 'A política de responsabilidade social da Eurofarma reflete nosso compromisso com a comunidade e o meioambiente. A empresa apoia diversasiniciativas de responsabilidade social e espera que todos os colaboradores se envolvam em projetos eatividades que promovam o bem-estarsocial e ambiental. O compromisso com práticas sustentáveis é essencial para nossa missão de promover um futuro melhor para todos.',
+          paragraph4: 'Em resumo, as políticas da Eurofarma são projetadas para garantir que todos os colaboradores atuem com amais alta ética e responsabilidade,promovendo um ambiente de trabalho seguro, respeitoso e produtivo. Este módulo serve como uma introdução àsprincipais diretrizes e normasque devem ser seguidas e será o alicerce para os módulos seguintes que detalharão aspectos específicos daspolíticas da empresa. A compreensão e a adesão a essas políticas são cruciais para o sucesso e a integridade da Eurofarma, econtamos com o compromisso de todospara manter os mais altos padrões de conduta profissional e responsabilidade.',
+          paragraph5: 'O compromisso da Eurofarma com a conformidade normativa, ou compliance, é um dos pilares fundamentais que sustenta nossas operações e reputação no mercado. A política de compliance da empresa abrange uma série de diretrizes que visam garantir que todas as atividades e práticas empresariais estejam em conformidade com as leis, regulamentos e normas aplicáveis, tanto em âmbito nacional quanto internacional. Nosso objetivo é assegurar que todos os colaboradores, fornecedores e parceiros comerciais compreendam e sigam os requisitos legais, éticos e regulamentares que regem o setor em que atuamos.',
+          paragraph6: 'A transparência é um dos princípios norteadores da política de compliance da Eurofarma. Todas as nossas interações comerciais são pautadas pela integridade, com o objetivo de construir e manter uma relação de confiança com nossos stakeholders. Isso inclui a prestação de informações claras e completas a órgãos reguladores, acionistas, clientes e colaboradores, sempre respeitando as regras e regulamentos estabelecidos pelas autoridades competentes. Cada colaborador, independentemente do seu cargo ou função, é responsável por agir de maneira ética e em conformidade com as normas internas e externas.'
+       
         },
       },
     },
@@ -166,8 +190,13 @@ let users = {
         title: 'Políticas da Empresa Eurofarma',
         subtitle: 'Módulo I | Introdução às Políticas da Eurofarma',
         paragraphs: {
-          paragraph1: 'Texto do primeiro parágrafo...',
-          paragraph2: 'Texto do segundo parágrafo...',
+          paragraph1: 'A Eurofarma é uma empresa comprometida com a excelência e integridade em todas as suas operações. Aspolíticasda empresa são fundamentais para garantir um ambiente de trabalho ético, seguro e produtivo para todos oscolaboradores.Este módulo oferece uma visão geral das principais políticas e diretrizes que regem nossas práticas diáriase interações profissionais. As políticas de conduta da Eurofarma estabelecem os padrões esperados de comportamento em todas as esferasda empresa.Os colaboradores são incentivados a atuar com transparência, respeito e honestidade em todas as suas ações.É imperativoque todos os membros da equipe compreendam e sigam essas diretrizes para promover um ambiente de trabalhopositivo e colaborativo.',
+          paragraph2: 'A política de segurança no trabalho é uma das nossas principais prioridades. A Eurofarma se dedica afornecer um ambientede trabalho seguro, identificando e mitigando riscos e promovendo práticas de segurança robustas. Todos oscolaboradoresdevem estar cientes das normas de segurança e participar ativamente dos treinamentos oferecidos paragarantir a segurança de todos no ambiente de trabalho. Além das políticas de segurança, a Eurofarma também adota uma abordagem rigorosa para a proteção de dados einformações confidenciais.A empresa implementa medidas de segurança para proteger as informações sensíveis de clientes ecolaboradores, e todos os funcionáriosdevem seguir os procedimentos estabelecidos para garantir a confidencialidade e integridade dos dados.',
+          paragraph3: 'A política de responsabilidade social da Eurofarma reflete nosso compromisso com a comunidade e o meioambiente. A empresa apoia diversasiniciativas de responsabilidade social e espera que todos os colaboradores se envolvam em projetos eatividades que promovam o bem-estarsocial e ambiental. O compromisso com práticas sustentáveis é essencial para nossa missão de promover um futuro melhor para todos.',
+          paragraph4: 'Em resumo, as políticas da Eurofarma são projetadas para garantir que todos os colaboradores atuem com amais alta ética e responsabilidade,promovendo um ambiente de trabalho seguro, respeitoso e produtivo. Este módulo serve como uma introdução àsprincipais diretrizes e normasque devem ser seguidas e será o alicerce para os módulos seguintes que detalharão aspectos específicos daspolíticas da empresa. A compreensão e a adesão a essas políticas são cruciais para o sucesso e a integridade da Eurofarma, econtamos com o compromisso de todospara manter os mais altos padrões de conduta profissional e responsabilidade.',
+          paragraph5: 'O compromisso da Eurofarma com a conformidade normativa, ou compliance, é um dos pilares fundamentais que sustenta nossas operações e reputação no mercado. A política de compliance da empresa abrange uma série de diretrizes que visam garantir que todas as atividades e práticas empresariais estejam em conformidade com as leis, regulamentos e normas aplicáveis, tanto em âmbito nacional quanto internacional. Nosso objetivo é assegurar que todos os colaboradores, fornecedores e parceiros comerciais compreendam e sigam os requisitos legais, éticos e regulamentares que regem o setor em que atuamos.',
+          paragraph6: 'A transparência é um dos princípios norteadores da política de compliance da Eurofarma. Todas as nossas interações comerciais são pautadas pela integridade, com o objetivo de construir e manter uma relação de confiança com nossos stakeholders. Isso inclui a prestação de informações claras e completas a órgãos reguladores, acionistas, clientes e colaboradores, sempre respeitando as regras e regulamentos estabelecidos pelas autoridades competentes. Cada colaborador, independentemente do seu cargo ou função, é responsável por agir de maneira ética e em conformidade com as normas internas e externas.'
+       
         },
       },
     },
@@ -185,8 +214,13 @@ let users = {
         title: 'Políticas da Empresa Eurofarma',
         subtitle: 'Módulo I | Introdução às Políticas da Eurofarma',
         paragraphs: {
-          paragraph1: 'Texto do primeiro parágrafo...',
-          paragraph2: 'Texto do segundo parágrafo...',
+          paragraph1: 'A Eurofarma é uma empresa comprometida com a excelência e integridade em todas as suas operações. Aspolíticasda empresa são fundamentais para garantir um ambiente de trabalho ético, seguro e produtivo para todos oscolaboradores.Este módulo oferece uma visão geral das principais políticas e diretrizes que regem nossas práticas diáriase interações profissionais. As políticas de conduta da Eurofarma estabelecem os padrões esperados de comportamento em todas as esferasda empresa.Os colaboradores são incentivados a atuar com transparência, respeito e honestidade em todas as suas ações.É imperativoque todos os membros da equipe compreendam e sigam essas diretrizes para promover um ambiente de trabalhopositivo e colaborativo.',
+          paragraph2: 'A política de segurança no trabalho é uma das nossas principais prioridades. A Eurofarma se dedica afornecer um ambientede trabalho seguro, identificando e mitigando riscos e promovendo práticas de segurança robustas. Todos oscolaboradoresdevem estar cientes das normas de segurança e participar ativamente dos treinamentos oferecidos paragarantir a segurança de todos no ambiente de trabalho. Além das políticas de segurança, a Eurofarma também adota uma abordagem rigorosa para a proteção de dados einformações confidenciais.A empresa implementa medidas de segurança para proteger as informações sensíveis de clientes ecolaboradores, e todos os funcionáriosdevem seguir os procedimentos estabelecidos para garantir a confidencialidade e integridade dos dados.',
+          paragraph3: 'A política de responsabilidade social da Eurofarma reflete nosso compromisso com a comunidade e o meioambiente. A empresa apoia diversasiniciativas de responsabilidade social e espera que todos os colaboradores se envolvam em projetos eatividades que promovam o bem-estarsocial e ambiental. O compromisso com práticas sustentáveis é essencial para nossa missão de promover um futuro melhor para todos.',
+          paragraph4: 'Em resumo, as políticas da Eurofarma são projetadas para garantir que todos os colaboradores atuem com amais alta ética e responsabilidade,promovendo um ambiente de trabalho seguro, respeitoso e produtivo. Este módulo serve como uma introdução àsprincipais diretrizes e normasque devem ser seguidas e será o alicerce para os módulos seguintes que detalharão aspectos específicos daspolíticas da empresa. A compreensão e a adesão a essas políticas são cruciais para o sucesso e a integridade da Eurofarma, econtamos com o compromisso de todospara manter os mais altos padrões de conduta profissional e responsabilidade.',
+          paragraph5: 'O compromisso da Eurofarma com a conformidade normativa, ou compliance, é um dos pilares fundamentais que sustenta nossas operações e reputação no mercado. A política de compliance da empresa abrange uma série de diretrizes que visam garantir que todas as atividades e práticas empresariais estejam em conformidade com as leis, regulamentos e normas aplicáveis, tanto em âmbito nacional quanto internacional. Nosso objetivo é assegurar que todos os colaboradores, fornecedores e parceiros comerciais compreendam e sigam os requisitos legais, éticos e regulamentares que regem o setor em que atuamos.',
+          paragraph6: 'A transparência é um dos princípios norteadores da política de compliance da Eurofarma. Todas as nossas interações comerciais são pautadas pela integridade, com o objetivo de construir e manter uma relação de confiança com nossos stakeholders. Isso inclui a prestação de informações claras e completas a órgãos reguladores, acionistas, clientes e colaboradores, sempre respeitando as regras e regulamentos estabelecidos pelas autoridades competentes. Cada colaborador, independentemente do seu cargo ou função, é responsável por agir de maneira ética e em conformidade com as normas internas e externas.'
+       
         },
       },
     },
@@ -204,8 +238,13 @@ let users = {
         title: 'Políticas da Empresa Eurofarma',
         subtitle: 'Módulo I | Introdução às Políticas da Eurofarma',
         paragraphs: {
-          paragraph1: 'Texto do primeiro parágrafo...',
-          paragraph2: 'Texto do segundo parágrafo...',
+          paragraph1: 'A Eurofarma é uma empresa comprometida com a excelência e integridade em todas as suas operações. Aspolíticasda empresa são fundamentais para garantir um ambiente de trabalho ético, seguro e produtivo para todos oscolaboradores.Este módulo oferece uma visão geral das principais políticas e diretrizes que regem nossas práticas diáriase interações profissionais. As políticas de conduta da Eurofarma estabelecem os padrões esperados de comportamento em todas as esferasda empresa.Os colaboradores são incentivados a atuar com transparência, respeito e honestidade em todas as suas ações.É imperativoque todos os membros da equipe compreendam e sigam essas diretrizes para promover um ambiente de trabalhopositivo e colaborativo.',
+          paragraph2: 'A política de segurança no trabalho é uma das nossas principais prioridades. A Eurofarma se dedica afornecer um ambientede trabalho seguro, identificando e mitigando riscos e promovendo práticas de segurança robustas. Todos oscolaboradoresdevem estar cientes das normas de segurança e participar ativamente dos treinamentos oferecidos paragarantir a segurança de todos no ambiente de trabalho. Além das políticas de segurança, a Eurofarma também adota uma abordagem rigorosa para a proteção de dados einformações confidenciais.A empresa implementa medidas de segurança para proteger as informações sensíveis de clientes ecolaboradores, e todos os funcionáriosdevem seguir os procedimentos estabelecidos para garantir a confidencialidade e integridade dos dados.',
+          paragraph3: 'A política de responsabilidade social da Eurofarma reflete nosso compromisso com a comunidade e o meioambiente. A empresa apoia diversasiniciativas de responsabilidade social e espera que todos os colaboradores se envolvam em projetos eatividades que promovam o bem-estarsocial e ambiental. O compromisso com práticas sustentáveis é essencial para nossa missão de promover um futuro melhor para todos.',
+          paragraph4: 'Em resumo, as políticas da Eurofarma são projetadas para garantir que todos os colaboradores atuem com amais alta ética e responsabilidade,promovendo um ambiente de trabalho seguro, respeitoso e produtivo. Este módulo serve como uma introdução àsprincipais diretrizes e normasque devem ser seguidas e será o alicerce para os módulos seguintes que detalharão aspectos específicos daspolíticas da empresa. A compreensão e a adesão a essas políticas são cruciais para o sucesso e a integridade da Eurofarma, econtamos com o compromisso de todospara manter os mais altos padrões de conduta profissional e responsabilidade.',
+          paragraph5: 'O compromisso da Eurofarma com a conformidade normativa, ou compliance, é um dos pilares fundamentais que sustenta nossas operações e reputação no mercado. A política de compliance da empresa abrange uma série de diretrizes que visam garantir que todas as atividades e práticas empresariais estejam em conformidade com as leis, regulamentos e normas aplicáveis, tanto em âmbito nacional quanto internacional. Nosso objetivo é assegurar que todos os colaboradores, fornecedores e parceiros comerciais compreendam e sigam os requisitos legais, éticos e regulamentares que regem o setor em que atuamos.',
+          paragraph6: 'A transparência é um dos princípios norteadores da política de compliance da Eurofarma. Todas as nossas interações comerciais são pautadas pela integridade, com o objetivo de construir e manter uma relação de confiança com nossos stakeholders. Isso inclui a prestação de informações claras e completas a órgãos reguladores, acionistas, clientes e colaboradores, sempre respeitando as regras e regulamentos estabelecidos pelas autoridades competentes. Cada colaborador, independentemente do seu cargo ou função, é responsável por agir de maneira ética e em conformidade com as normas internas e externas.'
+       
         },
       },
     },
@@ -223,8 +262,13 @@ let users = {
         title: 'Políticas da Empresa Eurofarma',
         subtitle: 'Módulo I | Introdução às Políticas da Eurofarma',
         paragraphs: {
-          paragraph1: 'Texto do primeiro parágrafo...',
-          paragraph2: 'Texto do segundo parágrafo...',
+          paragraph1: 'A Eurofarma é uma empresa comprometida com a excelência e integridade em todas as suas operações. Aspolíticasda empresa são fundamentais para garantir um ambiente de trabalho ético, seguro e produtivo para todos oscolaboradores.Este módulo oferece uma visão geral das principais políticas e diretrizes que regem nossas práticas diáriase interações profissionais. As políticas de conduta da Eurofarma estabelecem os padrões esperados de comportamento em todas as esferasda empresa.Os colaboradores são incentivados a atuar com transparência, respeito e honestidade em todas as suas ações.É imperativoque todos os membros da equipe compreendam e sigam essas diretrizes para promover um ambiente de trabalhopositivo e colaborativo.',
+          paragraph2: 'A política de segurança no trabalho é uma das nossas principais prioridades. A Eurofarma se dedica afornecer um ambientede trabalho seguro, identificando e mitigando riscos e promovendo práticas de segurança robustas. Todos oscolaboradoresdevem estar cientes das normas de segurança e participar ativamente dos treinamentos oferecidos paragarantir a segurança de todos no ambiente de trabalho. Além das políticas de segurança, a Eurofarma também adota uma abordagem rigorosa para a proteção de dados einformações confidenciais.A empresa implementa medidas de segurança para proteger as informações sensíveis de clientes ecolaboradores, e todos os funcionáriosdevem seguir os procedimentos estabelecidos para garantir a confidencialidade e integridade dos dados.',
+          paragraph3: 'A política de responsabilidade social da Eurofarma reflete nosso compromisso com a comunidade e o meioambiente. A empresa apoia diversasiniciativas de responsabilidade social e espera que todos os colaboradores se envolvam em projetos eatividades que promovam o bem-estarsocial e ambiental. O compromisso com práticas sustentáveis é essencial para nossa missão de promover um futuro melhor para todos.',
+          paragraph4: 'Em resumo, as políticas da Eurofarma são projetadas para garantir que todos os colaboradores atuem com amais alta ética e responsabilidade,promovendo um ambiente de trabalho seguro, respeitoso e produtivo. Este módulo serve como uma introdução àsprincipais diretrizes e normasque devem ser seguidas e será o alicerce para os módulos seguintes que detalharão aspectos específicos daspolíticas da empresa. A compreensão e a adesão a essas políticas são cruciais para o sucesso e a integridade da Eurofarma, econtamos com o compromisso de todospara manter os mais altos padrões de conduta profissional e responsabilidade.',
+          paragraph5: 'O compromisso da Eurofarma com a conformidade normativa, ou compliance, é um dos pilares fundamentais que sustenta nossas operações e reputação no mercado. A política de compliance da empresa abrange uma série de diretrizes que visam garantir que todas as atividades e práticas empresariais estejam em conformidade com as leis, regulamentos e normas aplicáveis, tanto em âmbito nacional quanto internacional. Nosso objetivo é assegurar que todos os colaboradores, fornecedores e parceiros comerciais compreendam e sigam os requisitos legais, éticos e regulamentares que regem o setor em que atuamos.',
+          paragraph6: 'A transparência é um dos princípios norteadores da política de compliance da Eurofarma. Todas as nossas interações comerciais são pautadas pela integridade, com o objetivo de construir e manter uma relação de confiança com nossos stakeholders. Isso inclui a prestação de informações claras e completas a órgãos reguladores, acionistas, clientes e colaboradores, sempre respeitando as regras e regulamentos estabelecidos pelas autoridades competentes. Cada colaborador, independentemente do seu cargo ou função, é responsável por agir de maneira ética e em conformidade com as normas internas e externas.'
+       
         },
       },
     },
@@ -242,8 +286,13 @@ let users = {
         title: 'Políticas da Empresa Eurofarma',
         subtitle: 'Módulo I | Introdução às Políticas da Eurofarma',
         paragraphs: {
-          paragraph1: 'Texto do primeiro parágrafo...',
-          paragraph2: 'Texto do segundo parágrafo...',
+          paragraph1: 'A Eurofarma é uma empresa comprometida com a excelência e integridade em todas as suas operações. Aspolíticasda empresa são fundamentais para garantir um ambiente de trabalho ético, seguro e produtivo para todos oscolaboradores.Este módulo oferece uma visão geral das principais políticas e diretrizes que regem nossas práticas diáriase interações profissionais. As políticas de conduta da Eurofarma estabelecem os padrões esperados de comportamento em todas as esferasda empresa.Os colaboradores são incentivados a atuar com transparência, respeito e honestidade em todas as suas ações.É imperativoque todos os membros da equipe compreendam e sigam essas diretrizes para promover um ambiente de trabalhopositivo e colaborativo.',
+          paragraph2: 'A política de segurança no trabalho é uma das nossas principais prioridades. A Eurofarma se dedica afornecer um ambientede trabalho seguro, identificando e mitigando riscos e promovendo práticas de segurança robustas. Todos oscolaboradoresdevem estar cientes das normas de segurança e participar ativamente dos treinamentos oferecidos paragarantir a segurança de todos no ambiente de trabalho. Além das políticas de segurança, a Eurofarma também adota uma abordagem rigorosa para a proteção de dados einformações confidenciais.A empresa implementa medidas de segurança para proteger as informações sensíveis de clientes ecolaboradores, e todos os funcionáriosdevem seguir os procedimentos estabelecidos para garantir a confidencialidade e integridade dos dados.',
+          paragraph3: 'A política de responsabilidade social da Eurofarma reflete nosso compromisso com a comunidade e o meioambiente. A empresa apoia diversasiniciativas de responsabilidade social e espera que todos os colaboradores se envolvam em projetos eatividades que promovam o bem-estarsocial e ambiental. O compromisso com práticas sustentáveis é essencial para nossa missão de promover um futuro melhor para todos.',
+          paragraph4: 'Em resumo, as políticas da Eurofarma são projetadas para garantir que todos os colaboradores atuem com amais alta ética e responsabilidade,promovendo um ambiente de trabalho seguro, respeitoso e produtivo. Este módulo serve como uma introdução àsprincipais diretrizes e normasque devem ser seguidas e será o alicerce para os módulos seguintes que detalharão aspectos específicos daspolíticas da empresa. A compreensão e a adesão a essas políticas são cruciais para o sucesso e a integridade da Eurofarma, econtamos com o compromisso de todospara manter os mais altos padrões de conduta profissional e responsabilidade.',
+          paragraph5: 'O compromisso da Eurofarma com a conformidade normativa, ou compliance, é um dos pilares fundamentais que sustenta nossas operações e reputação no mercado. A política de compliance da empresa abrange uma série de diretrizes que visam garantir que todas as atividades e práticas empresariais estejam em conformidade com as leis, regulamentos e normas aplicáveis, tanto em âmbito nacional quanto internacional. Nosso objetivo é assegurar que todos os colaboradores, fornecedores e parceiros comerciais compreendam e sigam os requisitos legais, éticos e regulamentares que regem o setor em que atuamos.',
+          paragraph6: 'A transparência é um dos princípios norteadores da política de compliance da Eurofarma. Todas as nossas interações comerciais são pautadas pela integridade, com o objetivo de construir e manter uma relação de confiança com nossos stakeholders. Isso inclui a prestação de informações claras e completas a órgãos reguladores, acionistas, clientes e colaboradores, sempre respeitando as regras e regulamentos estabelecidos pelas autoridades competentes. Cada colaborador, independentemente do seu cargo ou função, é responsável por agir de maneira ética e em conformidade com as normas internas e externas.'
+       
         },
       },
     }
@@ -251,72 +300,65 @@ let users = {
 };
 
 router.get('/users', (req, res) => {
-    res.status(200).send(users);
+  res.status(200).send(users);
 });
 
 router.get('/users/:id', (req, res) => {
-    const id = parseInt(req.params.id)
+  const id = req.params.id;
 
-    const item = users.find(item => item.id == id)
+  const user = users.users.find(item => item.id === id);
 
-    if(item){
-        res.status(200).send(item)
-    }else {
-        res.status(404).send('Item nao encontrado')
-    }
-})
+  if (user) {
+      return res.status(200).send(user);
+  } else {
+      return res.status(404).send('Item não encontrado');
+  }
+});
 
 // Rota para adicionar um novo item
 router.post('/users', (req, res) => {
-    const { id, role, username, courses } = req.body;
+  const { id, role, username, courses } = req.body;
 
-    // Verifica se todos os campos obrigatórios foram fornecidos
-    if (!id || !role || !username || !courses) {
-        return res.status(400).send('Bad request, todos os campos são obrigatórios.');
-    }
+  if (!id || !role || !username || !courses) {
+      return res.status(400).send('Bad request, todos os campos são obrigatórios.');
+  }
 
-    // Cria um novo item
-    const newItem = { id, role, username, courses };
+  const newItem = { id, role, username, courses };
+  users.users.push(newItem); // Adiciona o novo item ao array
 
-    // Adiciona o novo item ao array
-    users.push(newItem);
-
-    // Retorna o item criado
-    res.status(201).send(newItem);
+  res.status(201).send(newItem); // Retorna o item criado
 });
 
 // Rota para atualizar um item existente (Update)
 router.put('/users/:id', (req, res) => {
-    const id = req.params.id;
-    const index = users.findIndex(item => item.id === id);
+  const id = req.params.id;
+  const index = users.users.findIndex(item => item.id === id);
 
-    if (index === -1) {
-        return res.status(404).send('Item não encontrado');
-    }
+  if (index === -1) {
+      return res.status(404).send('Item não encontrado');
+  }
 
-    // Atualiza os dados do item
-    const updatedItem = {
-        ...users[index],
-        ...req.body
-    };
+  const updatedItem = {
+      ...users.users[index],
+      ...req.body
+  };
 
-    users[index] = updatedItem;
+  users.users[index] = updatedItem;
 
-    res.status(200).send(updatedItem);
+  res.status(200).send(updatedItem);
 });
 
 // Rota para excluir um item existente (Delete)
 router.delete('/users/:id', (req, res) => {
-    const id = req.params.id;
-    const index = users.findIndex(item => item.id === id);
+  const id = req.params.id;
+  const index = users.users.findIndex(item => item.id === id);
 
-    if (index === -1) {
-        return res.status(404).send('Item não encontrado');
-    }
+  if (index === -1) {
+      return res.status(404).send('Item não encontrado');
+  }
 
-    // Remove o item do array
-    users.splice(index, 1);
-    
-    res.status(204).send(); // Retorna status 204 (No Content) para exclusão bem-sucedida
+  users.users.splice(index, 1); // Remove o item do array
+
+  res.status(204).send(); // Retorna status 204 (No Content) para exclusão bem-sucedida
 });
 module.exports = router;
