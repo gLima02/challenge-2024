@@ -25,7 +25,7 @@ interface UsersResponse {
 
 export class UserService {
 
-  private apiUrl = 'https://demo8304640.mockable.io/challenge-2024-SwiftStart';
+  private apiUrl = 'http://localhost:3000/users/';
 
   constructor(private http: HttpClient) {}
 
@@ -39,6 +39,7 @@ export class UserService {
       })
     );
   }
+
 
   getLoggedInUser(userId: string | null): Observable<User | undefined> {
     return this.getUsers().pipe(
