@@ -13,4 +13,5 @@
 - npm install -y
 - npm install express
 - npm install cors
+- npm install concurrently --save-dev
 - npm start
