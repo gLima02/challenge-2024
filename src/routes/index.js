@@ -1,7 +1,6 @@
 const express = require('express')
 const router = new express.Router()
 
-
 //npm install 
 
 //ponto de acesso de get

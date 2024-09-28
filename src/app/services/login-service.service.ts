@@ -40,6 +40,7 @@ export class UserService {
     );
   }
 
+
   getLoggedInUser(userId: string | null): Observable<User | undefined> {
     return this.getUsers().pipe(
       map(users => users.find(user => user.id === userId)),

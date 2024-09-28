@@ -6,6 +6,7 @@ import { UserService } from '../../services/login-service.service';
 import { NavBarComponent } from "../nav-bar/nav-bar.component";
 import { TelaLoginComponent } from '../tela-login/tela-login.component';
 import { HttpClient } from '@angular/common/http'; // Importar HttpClient para requisições HTTP
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-curso',
@@ -15,7 +16,6 @@ import { HttpClient } from '@angular/common/http'; // Importar HttpClient para r
   styleUrls: ['./curso.component.css']
 })
 export class CursoComponent implements OnInit {
-
   role: string = '';
   editMode: { [key in 'title' | 'subtitle' | 'paragraph1' | 'paragraph2' | 'paragraph3' | 'paragraph4' | 'paragraph5' | 'paragraph6']: boolean } = {
     title: false,
@@ -39,6 +39,7 @@ export class CursoComponent implements OnInit {
   paragraph6: string = '';
 
   loggedInUserId: string | null = '';
+  userCount: number = 0; // Para armazenar o número total de usuários
 
   constructor(private userService: UserService, private http: HttpClient) { }
 
@@ -47,21 +48,30 @@ export class CursoComponent implements OnInit {
     this.userService.getLoggedInUserId().subscribe(userId => {
       this.loggedInUserId = userId;
       console.log('Logged in user ID:', userId);
-  
+
       // Verifica se userId não é null antes de chamar getUserData
       if (userId) {
         // Obtém os dados do usuário da API
         this.getUserData(userId);
       } else {
         console.error('User ID is null or undefined.');
-        // Aqui você pode adicionar lógica para lidar com o caso de userId ser nulo
+      }
+    });
+
+    // Obtém a lista de usuários e conta o número total
+    this.userService.getUsers().subscribe({
+      next: (users) => {
+        this.userCount = users.length; // Armazena o número de usuários
+        console.log('Total de usuários:', this.userCount);
+      },
+      error: (err) => {
+        console.error('Erro ao carregar usuários:', err);
       }
     });
   }
-  
+
   getUserData(userId: string) {
     this.http.get(`http://localhost:3000/users/${userId}`).subscribe((user: any) => {
-     
       this.role = user.role;
       this.title = user.courses.title;
       this.subtitle = user.courses.subtitle;
@@ -73,7 +83,6 @@ export class CursoComponent implements OnInit {
       this.paragraph6 = user.courses.paragraphs.paragraph6 || '';
     });
   }
-  
 
   // Função para alternar entre os modos de edição e visualização
   toggleEdit(section: 'title' | 'subtitle' | 'paragraph1' | 'paragraph2' | 'paragraph3' | 'paragraph4' | 'paragraph5' | 'paragraph6') {
@@ -99,10 +108,12 @@ export class CursoComponent implements OnInit {
       }
     };
 
-    // Faz uma requisição PUT para atualizar os dados do usuário na API
-    this.http.put(`http://localhost:3000/users/${this.loggedInUserId}`, updatedUserData).subscribe(() => {
-      console.log('Alterações salvas com sucesso.');
-    });
+    for (let i = 1; i <= this.userCount; i++) {
+      this.http.put(`http://localhost:3000/users/${i}`, updatedUserData).subscribe(() => {
+        console.log('Alterações salvas com sucesso.');
+      });
+    }
+ 
   }
 
   answers = {
