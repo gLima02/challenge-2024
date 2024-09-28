@@ -131,17 +131,29 @@ export class CursoComponent implements OnInit {
     q4: 'a'
   };
 
+    // Estado para verificar se a resposta está errada
+    isWrong = {
+      q1: false,
+      q2: false,
+      q3: false,
+      q4: false
+    };
   resultMessage: string | null = null;
 
   checkAnswers() {
     let correctCount = 0;
 
     Object.keys(this.answers).forEach((key) => {
-      if (this.answers[key as keyof typeof this.answers] === this.correctAnswers[key as keyof typeof this.correctAnswers]) {
+      const question = key as keyof typeof this.answers;
+      if (this.answers[question] === this.correctAnswers[question]) {
         correctCount++;
+        this.isWrong[question] = false; // Resposta correta, remove o erro
+      } else {
+        this.isWrong[question] = true; // Marca como incorreta
       }
     });
 
     this.resultMessage = `Você acertou ${correctCount} de 4 questões.`;
   }
 }
+

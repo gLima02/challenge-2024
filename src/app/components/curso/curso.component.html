@@ -117,75 +117,82 @@
                   1. Qual é a principal prioridade da Eurofarma em relação ao ambiente de trabalho?
                 </label>
                 <div class="col-sm-12 col-md-8">
-                  <select id="q1" class="form-select" [(ngModel)]="answers.q1" name="q1" required>
+                  <select id="q1" class="form-select" [(ngModel)]="answers.q1" name="q1" required [ngClass]="{'is-invalid': isWrong.q1}">
                     <option value="" disabled selected>Selecione uma opção</option>
                     <option value="a">Maximizar os lucros</option>
                     <option value="b">Garantir a segurança no trabalho</option>
                     <option value="c">Aumentar a produtividade</option>
                     <option value="d">Expandir globalmente</option>
                   </select>
+                  <!-- Exibe a mensagem se a resposta estiver errada -->
+                  <div *ngIf="isWrong.q1" class="text-danger mt-1">Resposta incorreta</div>
                 </div>
               </div>
-
+          
               <!-- Pergunta 2 -->
               <div class="row mb-3">
                 <label for="q2" class="col-sm-12 col-md-4 col-form-label">
                   2. O que é esperado dos colaboradores em relação às políticas de conduta?
                 </label>
                 <div class="col-sm-12 col-md-8">
-                  <select id="q2" class="form-select" [(ngModel)]="answers.q2" name="q2" required>
+                  <select id="q2" class="form-select" [(ngModel)]="answers.q2" name="q2" required [ngClass]="{'is-invalid': isWrong.q2}">
                     <option value="" disabled selected>Selecione uma opção</option>
                     <option value="a">Seguir com integridade e respeito</option>
                     <option value="b">Focar exclusivamente em resultados</option>
                     <option value="c">Aumentar a presença online</option>
                     <option value="d">Evitar responsabilidades adicionais</option>
                   </select>
+                  <!-- Exibe a mensagem se a resposta estiver errada -->
+                  <div *ngIf="isWrong.q2" class="text-danger mt-1">Resposta incorreta</div>
                 </div>
               </div>
-
+          
               <!-- Pergunta 3 -->
               <div class="row mb-3">
                 <label for="q3" class="col-sm-12 col-md-4 col-form-label">
                   3. Como a Eurofarma protege as informações confidenciais?
                 </label>
                 <div class="col-sm-12 col-md-8">
-                  <select id="q3" class="form-select" [(ngModel)]="answers.q3" name="q3" required>
+                  <select id="q3" class="form-select" [(ngModel)]="answers.q3" name="q3" required [ngClass]="{'is-invalid': isWrong.q3}">
                     <option value="" disabled selected>Selecione uma opção</option>
                     <option value="a">Com práticas de segurança robustas</option>
                     <option value="b">Com treinamento contínuo em vendas</option>
-                    <option value="c">Através de auditórias externas apenas</option>
+                    <option value="c">Através de auditorias externas apenas</option>
                     <option value="d">Aumentando o número de funcionários</option>
                   </select>
+                  <!-- Exibe a mensagem se a resposta estiver errada -->
+                  <div *ngIf="isWrong.q3" class="text-danger mt-1">Resposta incorreta</div>
                 </div>
               </div>
-
+          
               <!-- Pergunta 4 -->
               <div class="row mb-3">
                 <label for="q4" class="col-sm-12 col-md-4 col-form-label">
                   4. Qual é o papel das políticas de responsabilidade social da Eurofarma?
                 </label>
                 <div class="col-sm-12 col-md-8">
-                  <select id="q4" class="form-select" [(ngModel)]="answers.q4" name="q4" required>
+                  <select id="q4" class="form-select" [(ngModel)]="answers.q4" name="q4" required [ngClass]="{'is-invalid': isWrong.q4}">
                     <option value="" disabled selected>Selecione uma opção</option>
                     <option value="a">Promover o bem-estar social e ambiental</option>
                     <option value="b">Aumentar o lucro da empresa</option>
                     <option value="c">Reduzir custos operacionais</option>
                     <option value="d">Expandir a gama de produtos</option>
                   </select>
+                  <!-- Exibe a mensagem se a resposta estiver errada -->
+                  <div *ngIf="isWrong.q4" class="text-danger mt-1">Resposta incorreta</div>
                 </div>
               </div>
-
+          
               <!-- Botão Enviar -->
               <div class="d-grid mb-1">
                 <button type="submit" class="btn btn-primary">Enviar Respostas</button>
               </div>
             </form>
-
+          
             <!-- Mensagem de resultado -->
             <div *ngIf="resultMessage" class="alert alert-info mt-3">{{ resultMessage }}</div>
           </div>
-        </div>
-      </div>
+          
     </div>
   </div>
 </div>
