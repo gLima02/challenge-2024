@@ -5,8 +5,7 @@ import { RouterModule } from '@angular/router';
 import { UserService } from '../../services/login-service.service';
 import { NavBarComponent } from "../nav-bar/nav-bar.component";
 import { TelaLoginComponent } from '../tela-login/tela-login.component';
-import { HttpClient } from '@angular/common/http'; // Importar HttpClient para requisições HTTP
-import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-curso',
@@ -39,7 +38,7 @@ export class CursoComponent implements OnInit {
   paragraph6: string = '';
 
   loggedInUserId: string | null = '';
-  userCount: number = 0; // Para armazenar o número total de usuários
+  userCount: number = 0;
 
   constructor(private userService: UserService, private http: HttpClient) { }
 
@@ -49,7 +48,6 @@ export class CursoComponent implements OnInit {
       this.loggedInUserId = userId;
       console.log('Logged in user ID:', userId);
 
-      // Verifica se userId não é null antes de chamar getUserData
       if (userId) {
         // Obtém os dados do usuário da API
         this.getUserData(userId);
@@ -61,7 +59,7 @@ export class CursoComponent implements OnInit {
     // Obtém a lista de usuários e conta o número total
     this.userService.getUsers().subscribe({
       next: (users) => {
-        this.userCount = users.length; // Armazena o número de usuários
+        this.userCount = users.length;
         console.log('Total de usuários:', this.userCount);
       },
       error: (err) => {
@@ -73,14 +71,24 @@ export class CursoComponent implements OnInit {
   getUserData(userId: string) {
     this.http.get(`http://localhost:3000/users/${userId}`).subscribe((user: any) => {
       this.role = user.role;
-      this.title = user.courses.title;
-      this.subtitle = user.courses.subtitle;
-      this.paragraph1 = user.courses.paragraphs.paragraph1;
-      this.paragraph2 = user.courses.paragraphs.paragraph2;
-      this.paragraph3 = user.courses.paragraphs.paragraph3 || '';
-      this.paragraph4 = user.courses.paragraphs.paragraph4 || '';
-      this.paragraph5 = user.courses.paragraphs.paragraph5 || '';
-      this.paragraph6 = user.courses.paragraphs.paragraph6 || '';
+      
+      // Acessa o primeiro curso (course1)
+      const selectedCourse = user.courses.course1;
+      if (selectedCourse) {
+        this.title = selectedCourse.title;
+        this.subtitle = selectedCourse.subtitle;
+        
+        // Acessa o primeiro módulo e seus parágrafos
+        const module = selectedCourse.modules[0];
+        if (module) {
+          this.paragraph1 = module.paragraphs.paragraph1;
+          this.paragraph2 = module.paragraphs.paragraph2;
+          this.paragraph3 = module.paragraphs.paragraph3 || '';
+          this.paragraph4 = module.paragraphs.paragraph4 || '';
+          this.paragraph5 = module.paragraphs.paragraph5 || '';
+          this.paragraph6 = module.paragraphs.paragraph6 || '';
+        }
+      }
     });
   }
 
@@ -95,25 +103,31 @@ export class CursoComponent implements OnInit {
   saveChanges() {
     const updatedUserData = {
       courses: {
-        title: this.title,
-        subtitle: this.subtitle,
-        paragraphs: {
-          paragraph1: this.paragraph1,
-          paragraph2: this.paragraph2,
-          paragraph3: this.paragraph3,
-          paragraph4: this.paragraph4,
-          paragraph5: this.paragraph5,
-          paragraph6: this.paragraph6,
+        course1: {
+          title: this.title,
+          subtitle: this.subtitle,
+          modules: [
+            {
+              paragraphs: {
+                paragraph1: this.paragraph1,
+                paragraph2: this.paragraph2,
+                paragraph3: this.paragraph3,
+                paragraph4: this.paragraph4,
+                paragraph5: this.paragraph5,
+                paragraph6: this.paragraph6,
+              }
+            }
+          ]
         }
       }
     };
 
+    // Atualiza os dados para todos os usuários
     for (let i = 1; i <= this.userCount; i++) {
       this.http.put(`http://localhost:3000/users/${i}`, updatedUserData).subscribe(() => {
         console.log('Alterações salvas com sucesso.');
       });
     }
- 
   }
 
   answers = {
@@ -123,7 +137,6 @@ export class CursoComponent implements OnInit {
     q4: ''
   };
 
-  // Respostas corretas
   correctAnswers = {
     q1: 'b',
     q2: 'a',
@@ -131,13 +144,13 @@ export class CursoComponent implements OnInit {
     q4: 'a'
   };
 
-    // Estado para verificar se a resposta está errada
-    isWrong = {
-      q1: false,
-      q2: false,
-      q3: false,
-      q4: false
-    };
+  isWrong = {
+    q1: false,
+    q2: false,
+    q3: false,
+    q4: false
+  };
+
   resultMessage: string | null = null;
 
   checkAnswers() {
@@ -147,13 +160,12 @@ export class CursoComponent implements OnInit {
       const question = key as keyof typeof this.answers;
       if (this.answers[question] === this.correctAnswers[question]) {
         correctCount++;
-        this.isWrong[question] = false; // Resposta correta, remove o erro
+        this.isWrong[question] = false;
       } else {
-        this.isWrong[question] = true; // Marca como incorreta
+        this.isWrong[question] = true;
       }
     });
 
     this.resultMessage = `Você acertou ${correctCount} de 4 questões.`;
   }
 }
-
