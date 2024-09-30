@@ -94,3 +94,10 @@ html, body {
 .teste{
   width: 85%;
 }
+
+.is-invalid select {
+  border-color: red;
+}
+.text-danger {
+  color: red;
+}

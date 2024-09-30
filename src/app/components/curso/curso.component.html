@@ -1,165 +1,198 @@
-<app-nav-bar />
+<app-nav-bar></app-nav-bar>
 <div class="margem">
   <div class="d-flex flex-column justify-content-center align-items-center mb-5">
-    <div class="leave z-3 ms-3 text-main position-absolute start-0 top-0"><svg class="btn" [routerLink]="['/portal']"
-        xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-left-circle"
-        viewBox="0 0 16 16">
+    <!-- Botão de Voltar -->
+    <div class="leave z-3 ms-3 text-main position-absolute start-0 top-0">
+      <svg class="btn" [routerLink]="['/portal']" xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+        fill="currentColor" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
         <path fill-rule="evenodd"
-          d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z" />
+          d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
       </svg>
     </div>
+
+    <!-- Título e Subtítulo -->
     <h2 class="text-center title pb-3 pt-3">
       <ng-container *ngIf="editMode.subtitle; else viewModeTitle">
         <textarea [(ngModel)]="subtitle" class="form-control mb-3" rows="3"></textarea>
-        <button class="btn btn-sm btn-secondary ms-3" (click)="toggleEdit('subtitle')">
-          Salvar
-        </button>
+        <button class="btn btn-sm btn-secondary ms-3" (click)="toggleEdit('subtitle')">Salvar</button>
       </ng-container>
       <ng-template #viewModeTitle>
         <div class="d-flex flex-column">
-          <div>
-            {{ title }}
-          </div>
+          <div>{{ title }}</div>
           <div class="d-flex align-items-center">
             <h4 class="mb-3 mt-2">{{ subtitle }}</h4>
-            <button *ngIf="role === 'admin'" class="btn btn-sm btn-secondary ms-3" (click)="toggleEdit('subtitle')">
-              Editar
-            </button>
+            <button *ngIf="role === 'admin'" class="btn btn-sm btn-secondary ms-3" (click)="toggleEdit('subtitle')">Editar</button>
           </div>
         </div>
       </ng-template>
     </h2>
+
+    <!-- Conteúdo -->
     <div class="bg-light p-4 rounded shadow-sm teste">
       <div class="module">
         <div class="text-muted" style="font-size: 1.2em;">
-          <img src="../../../assets/images/logotipo-eurofarma-350x350_.png"
-            class="float-end ms-3 mb-3 img-fluid rounded" alt="Imagem Descritiva">
+          <img src="../../../assets/images/logotipo-eurofarma-350x350_.png" class="float-end ms-3 mb-3 img-fluid rounded"
+            alt="Imagem Descritiva">
 
-          <p>
-            A Eurofarma é uma empresa comprometida com a excelência e integridade em todas as suas operações. As
-            políticas
-            da empresa são fundamentais para garantir um ambiente de trabalho ético, seguro e produtivo para todos os
-            colaboradores.
-            Este módulo oferece uma visão geral das principais políticas e diretrizes que regem nossas práticas diárias
-            e interações profissionais.
-          </p>
+          <!-- Parágrafos Editáveis -->
+          <!-- Parágrafo 1 -->
+          <ng-container *ngIf="editMode.paragraph1; else viewModeParagraph1">
+            <textarea [(ngModel)]="paragraph1" class="form-control mb-3" rows="3"></textarea>
+            <button class="btn btn-sm btn-secondary ms-3" (click)="toggleEdit('paragraph1')">Salvar</button>
+          </ng-container>
+          <ng-template #viewModeParagraph1>
+            <p>
+              {{ paragraph1 }}
+              <button *ngIf="role === 'admin'" class="btn btn-sm btn-secondary ms-3" (click)="toggleEdit('paragraph1')">Editar</button>
+            </p>
+          </ng-template>
 
-          <p>
-            As políticas de conduta da Eurofarma estabelecem os padrões esperados de comportamento em todas as esferas
-            da empresa.
-            Os colaboradores são incentivados a atuar com transparência, respeito e honestidade em todas as suas ações.
-            É imperativo
-            que todos os membros da equipe compreendam e sigam essas diretrizes para promover um ambiente de trabalho
-            positivo e colaborativo.
-          </p>
+          <!-- Parágrafo 2 -->
+          <ng-container *ngIf="editMode.paragraph2; else viewModeParagraph2">
+            <textarea [(ngModel)]="paragraph2" class="form-control mb-3" rows="3"></textarea>
+            <button class="btn btn-sm btn-secondary ms-3" (click)="toggleEdit('paragraph2')">Salvar</button>
+          </ng-container>
+          <ng-template #viewModeParagraph2>
+            <p>
+              {{ paragraph2 }}
+              <button *ngIf="role === 'admin'" class="btn btn-sm btn-secondary ms-3" (click)="toggleEdit('paragraph2')">Editar</button>
+            </p>
+          </ng-template>
 
-          <p>
-            A política de segurança no trabalho é uma das nossas principais prioridades. A Eurofarma se dedica a
-            fornecer um ambiente
-            de trabalho seguro, identificando e mitigando riscos e promovendo práticas de segurança robustas. Todos os
-            colaboradores
-            devem estar cientes das normas de segurança e participar ativamente dos treinamentos oferecidos para
-            garantir a segurança de todos
-            no ambiente de trabalho.
-          </p>
+          <!-- Parágrafo 3 -->
+          <ng-container *ngIf="editMode.paragraph3; else viewModeParagraph3">
+            <textarea [(ngModel)]="paragraph3" class="form-control mb-3" rows="3"></textarea>
+            <button class="btn btn-sm btn-secondary ms-3" (click)="toggleEdit('paragraph3')">Salvar</button>
+          </ng-container>
+          <ng-template #viewModeParagraph3>
+            <p>
+              {{ paragraph3 }}
+              <button *ngIf="role === 'admin'" class="btn btn-sm btn-secondary ms-3" (click)="toggleEdit('paragraph3')">Editar</button>
+            </p>
+          </ng-template>
 
-          <p>
-            Além das políticas de segurança, a Eurofarma também adota uma abordagem rigorosa para a proteção de dados e
-            informações confidenciais.
-            A empresa implementa medidas de segurança para proteger as informações sensíveis de clientes e
-            colaboradores, e todos os funcionários
-            devem seguir os procedimentos estabelecidos para garantir a confidencialidade e integridade dos dados.
-          </p>
+          <!-- Parágrafo 4 -->
+          <ng-container *ngIf="editMode.paragraph4; else viewModeParagraph4">
+            <textarea [(ngModel)]="paragraph4" class="form-control mb-3" rows="3"></textarea>
+            <button class="btn btn-sm btn-secondary ms-3" (click)="toggleEdit('paragraph4')">Salvar</button>
+          </ng-container>
+          <ng-template #viewModeParagraph4>
+            <p>
+              {{ paragraph4 }}
+              <button *ngIf="role === 'admin'" class="btn btn-sm btn-secondary ms-3" (click)="toggleEdit('paragraph4')">Editar</button>
+            </p>
+          </ng-template>
 
-          <p>
-            A política de responsabilidade social da Eurofarma reflete nosso compromisso com a comunidade e o meio
-            ambiente. A empresa apoia diversas
-            iniciativas de responsabilidade social e espera que todos os colaboradores se envolvam em projetos e
-            atividades que promovam o bem-estar
-            social e ambiental. O compromisso com práticas sustentáveis é essencial para nossa missão de promover um
-            futuro melhor para todos.
-          </p>
+          <!-- Parágrafo 5 -->
+          <ng-container *ngIf="editMode.paragraph5; else viewModeParagraph5">
+            <textarea [(ngModel)]="paragraph5" class="form-control mb-3" rows="3"></textarea>
+            <button class="btn btn-sm btn-secondary ms-3" (click)="toggleEdit('paragraph5')">Salvar</button>
+          </ng-container>
+          <ng-template #viewModeParagraph5>
+            <p>
+              {{ paragraph5 }}
+              <button *ngIf="role === 'admin'" class="btn btn-sm btn-secondary ms-3" (click)="toggleEdit('paragraph5')">Editar</button>
+            </p>
+          </ng-template>
 
-          <p>
-            Em resumo, as políticas da Eurofarma são projetadas para garantir que todos os colaboradores atuem com a
-            mais alta ética e responsabilidade,
-            promovendo um ambiente de trabalho seguro, respeitoso e produtivo. Este módulo serve como uma introdução às
-            principais diretrizes e normas
-            que devem ser seguidas e será o alicerce para os módulos seguintes que detalharão aspectos específicos das
-            políticas da empresa.
-          </p>
+          <!-- Parágrafo 6 -->
+          <ng-container *ngIf="editMode.paragraph6; else viewModeParagraph6">
+            <textarea [(ngModel)]="paragraph6" class="form-control mb-3" rows="3"></textarea>
+            <button class="btn btn-sm btn-secondary ms-3" (click)="toggleEdit('paragraph6')">Salvar</button>
+          </ng-container>
+          <ng-template #viewModeParagraph6>
+            <p>
+              {{ paragraph6 }}
+              <button *ngIf="role === 'admin'" class="btn btn-sm btn-secondary ms-3" (click)="toggleEdit('paragraph6')">Editar</button>
+            </p>
+          </ng-template>
 
-          <p>
-            A compreensão e a adesão a essas políticas são cruciais para o sucesso e a integridade da Eurofarma, e
-            contamos com o compromisso de todos
-            para manter os mais altos padrões de conduta profissional e responsabilidade.
-          </p>
+          <!-- Questionário -->
           <div class="mt-4">
             <h4 class="text-center mb-4">Questionário de Avaliação</h4>
-            <form id="quiz-form">
+            <form id="quiz-form" (ngSubmit)="checkAnswers()">
+              <!-- Pergunta 1 -->
               <div class="row mb-3">
-                <label for="q1" class="col-sm-12 col-md-4 col-form-label">1. Qual é a principal prioridade da Eurofarma
-                  em relação ao ambiente de trabalho?</label>
+                <label for="q1" class="col-sm-12 col-md-4 col-form-label">
+                  1. Qual é a principal prioridade da Eurofarma em relação ao ambiente de trabalho?
+                </label>
                 <div class="col-sm-12 col-md-8">
-                  <select id="q1" class="form-select" required>
+                  <select id="q1" class="form-select" [(ngModel)]="answers.q1" name="q1" required [ngClass]="{'is-invalid': isWrong.q1}">
                     <option value="" disabled selected>Selecione uma opção</option>
                     <option value="a">Maximizar os lucros</option>
                     <option value="b">Garantir a segurança no trabalho</option>
                     <option value="c">Aumentar a produtividade</option>
                     <option value="d">Expandir globalmente</option>
                   </select>
+                  <!-- Exibe a mensagem se a resposta estiver errada -->
+                  <div *ngIf="isWrong.q1" class="text-danger mt-1">Resposta incorreta</div>
                 </div>
               </div>
-
+          
+              <!-- Pergunta 2 -->
               <div class="row mb-3">
-                <label for="q2" class="col-sm-12 col-md-4 col-form-label">2. O que é esperado dos colaboradores em
-                  relação às políticas de conduta?</label>
+                <label for="q2" class="col-sm-12 col-md-4 col-form-label">
+                  2. O que é esperado dos colaboradores em relação às políticas de conduta?
+                </label>
                 <div class="col-sm-12 col-md-8">
-                  <select id="q2" class="form-select" required>
+                  <select id="q2" class="form-select" [(ngModel)]="answers.q2" name="q2" required [ngClass]="{'is-invalid': isWrong.q2}">
                     <option value="" disabled selected>Selecione uma opção</option>
                     <option value="a">Seguir com integridade e respeito</option>
                     <option value="b">Focar exclusivamente em resultados</option>
                     <option value="c">Aumentar a presença online</option>
                     <option value="d">Evitar responsabilidades adicionais</option>
                   </select>
+                  <!-- Exibe a mensagem se a resposta estiver errada -->
+                  <div *ngIf="isWrong.q2" class="text-danger mt-1">Resposta incorreta</div>
                 </div>
               </div>
-
+          
+              <!-- Pergunta 3 -->
               <div class="row mb-3">
-                <label for="q3" class="col-sm-12 col-md-4 col-form-label">3. Como a Eurofarma protege as informações
-                  confidenciais?</label>
+                <label for="q3" class="col-sm-12 col-md-4 col-form-label">
+                  3. Como a Eurofarma protege as informações confidenciais?
+                </label>
                 <div class="col-sm-12 col-md-8">
-                  <select id="q3" class="form-select" required>
+                  <select id="q3" class="form-select" [(ngModel)]="answers.q3" name="q3" required [ngClass]="{'is-invalid': isWrong.q3}">
                     <option value="" disabled selected>Selecione uma opção</option>
                     <option value="a">Com práticas de segurança robustas</option>
                     <option value="b">Com treinamento contínuo em vendas</option>
-                    <option value="c">Através de auditórias externas apenas</option>
+                    <option value="c">Através de auditorias externas apenas</option>
                     <option value="d">Aumentando o número de funcionários</option>
                   </select>
+                  <!-- Exibe a mensagem se a resposta estiver errada -->
+                  <div *ngIf="isWrong.q3" class="text-danger mt-1">Resposta incorreta</div>
                 </div>
               </div>
-
+          
+              <!-- Pergunta 4 -->
               <div class="row mb-3">
-                <label for="q4" class="col-sm-12 col-md-4 col-form-label">4. Qual é o papel das políticas de
-                  responsabilidade social da Eurofarma?</label>
+                <label for="q4" class="col-sm-12 col-md-4 col-form-label">
+                  4. Qual é o papel das políticas de responsabilidade social da Eurofarma?
+                </label>
                 <div class="col-sm-12 col-md-8">
-                  <select id="q4" class="form-select" required>
+                  <select id="q4" class="form-select" [(ngModel)]="answers.q4" name="q4" required [ngClass]="{'is-invalid': isWrong.q4}">
                     <option value="" disabled selected>Selecione uma opção</option>
                     <option value="a">Promover o bem-estar social e ambiental</option>
                     <option value="b">Aumentar o lucro da empresa</option>
                     <option value="c">Reduzir custos operacionais</option>
                     <option value="d">Expandir a gama de produtos</option>
                   </select>
+                  <!-- Exibe a mensagem se a resposta estiver errada -->
+                  <div *ngIf="isWrong.q4" class="text-danger mt-1">Resposta incorreta</div>
                 </div>
               </div>
-
+          
+              <!-- Botão Enviar -->
               <div class="d-grid mb-1">
                 <button type="submit" class="btn btn-primary">Enviar Respostas</button>
               </div>
             </form>
+          
+            <!-- Mensagem de resultado -->
+            <div *ngIf="resultMessage" class="alert alert-info mt-3">{{ resultMessage }}</div>
           </div>
-        </div>
-      </div>
+          
     </div>
   </div>
 </div>

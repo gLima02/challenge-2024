@@ -6,3 +6,12 @@
 - Marcelo Amarante Cintra – 94705
 - Matheus Pazikas de Almeida – 94463
 - Vicenzo Pereira Castelli dos Santos - 93647
+
+# Comandos utilizados no terminal p/ execução
+
+- npm init -y
+- npm install -y
+- npm install express
+- npm install cors
+- npm install concurrently --save-dev
+- npm start
